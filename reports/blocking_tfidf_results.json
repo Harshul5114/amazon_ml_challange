@@ -1,0 +1,1674 @@
+{
+  "validation_s1": 440522,
+  "true_links": 1525811,
+  "baseline_pairs": 10707669,
+  "baseline_true_hits": 924782,
+  "tfidf_pairs_at_20": 17616831,
+  "tfidf_stage4_overlap_at_20": 2082316,
+  "k_results": {
+    "5": {
+      "tfidf": {
+        "true_hits": 811933,
+        "true_recall": 0.5321320923757923,
+        "candidate_counts": {
+          "total_pairs": 4404494,
+          "mean": 9.998351955180445,
+          "median": 10,
+          "p90": 10,
+          "p95": 10,
+          "p99": 10,
+          "max": 10,
+          "zero_entities": 69
+        },
+        "source_recall": {
+          "S2": {
+            "hits": 400299,
+            "total": 738024
+          },
+          "S3": {
+            "hits": 411634,
+            "total": 787787
+          }
+        },
+        "country_recall": {
+          "India": {
+            "hits": 280275,
+            "total": 610096
+          },
+          "US": {
+            "hits": 531658,
+            "total": 915715
+          }
+        },
+        "all_true_s1_fraction": 0.3149990238852997,
+        "all_true_matched_s1_fraction": 0.2744893911161868
+      },
+      "union": {
+        "true_hits": 1138960,
+        "true_recall": 0.7464620454302663,
+        "candidate_counts": {
+          "total_pairs": 14027030,
+          "mean": 31.84183763807483,
+          "median": 13,
+          "p90": 79,
+          "p95": 125,
+          "p99": 248,
+          "max": 1076,
+          "zero_entities": 12
+        },
+        "source_recall": {
+          "S2": {
+            "hits": 547974,
+            "total": 738024
+          },
+          "S3": {
+            "hits": 590986,
+            "total": 787787
+          }
+        },
+        "country_recall": {
+          "India": {
+            "hits": 375110,
+            "total": 610096
+          },
+          "US": {
+            "hits": 763850,
+            "total": 915715
+          }
+        },
+        "all_true_s1_fraction": 0.5168981344859054,
+        "all_true_matched_s1_fraction": 0.48832842459578046
+      },
+      "incremental_true_hits_over_stage4": 214178,
+      "candidate_overlap_with_stage4": 1085133
+    },
+    "10": {
+      "tfidf": {
+        "true_hits": 910709,
+        "true_recall": 0.596868812716647,
+        "candidate_counts": {
+          "total_pairs": 8808773,
+          "mean": 19.996215853010746,
+          "median": 20,
+          "p90": 20,
+          "p95": 20,
+          "p99": 20,
+          "max": 20,
+          "zero_entities": 69
+        },
+        "source_recall": {
+          "S2": {
+            "hits": 448038,
+            "total": 738024
+          },
+          "S3": {
+            "hits": 462671,
+            "total": 787787
+          }
+        },
+        "country_recall": {
+          "India": {
+            "hits": 313494,
+            "total": 610096
+          },
+          "US": {
+            "hits": 597215,
+            "total": 915715
+          }
+        },
+        "all_true_s1_fraction": 0.3828707760338871,
+        "all_true_matched_s1_fraction": 0.34637494740638336
+      },
+      "union": {
+        "true_hits": 1176168,
+        "true_recall": 0.7708477655489442,
+        "candidate_counts": {
+          "total_pairs": 18043178,
+          "mean": 40.95863089698131,
+          "median": 22,
+          "p90": 86,
+          "p95": 132,
+          "p99": 255,
+          "max": 1080,
+          "zero_entities": 12
+        },
+        "source_recall": {
+          "S2": {
+            "hits": 566270,
+            "total": 738024
+          },
+          "S3": {
+            "hits": 609898,
+            "total": 787787
+          }
+        },
+        "country_recall": {
+          "India": {
+            "hits": 391831,
+            "total": 610096
+          },
+          "US": {
+            "hits": 784337,
+            "total": 915715
+          }
+        },
+        "all_true_s1_fraction": 0.557238912018015,
+        "all_true_matched_s1_fraction": 0.5310548776822744
+      },
+      "incremental_true_hits_over_stage4": 251386,
+      "candidate_overlap_with_stage4": 1473264
+    },
+    "20": {
+      "tfidf": {
+        "true_hits": 990886,
+        "true_recall": 0.649415949943997,
+        "candidate_counts": {
+          "total_pairs": 17616831,
+          "mean": 39.99080863157799,
+          "median": 40,
+          "p90": 40,
+          "p95": 40,
+          "p99": 40,
+          "max": 40,
+          "zero_entities": 69
+        },
+        "source_recall": {
+          "S2": {
+            "hits": 486287,
+            "total": 738024
+          },
+          "S3": {
+            "hits": 504599,
+            "total": 787787
+          }
+        },
+        "country_recall": {
+          "India": {
+            "hits": 345081,
+            "total": 610096
+          },
+          "US": {
+            "hits": 645805,
+            "total": 915715
+          }
+        },
+        "all_true_s1_fraction": 0.4382323697794889,
+        "all_true_matched_s1_fraction": 0.40501051872332755
+      },
+      "union": {
+        "true_hits": 1206355,
+        "true_recall": 0.7906319983274468,
+        "candidate_counts": {
+          "total_pairs": 26242184,
+          "mean": 59.5706548140615,
+          "median": 42,
+          "p90": 100,
+          "p95": 148,
+          "p99": 269,
+          "max": 1090,
+          "zero_entities": 12
+        },
+        "source_recall": {
+          "S2": {
+            "hits": 580911,
+            "total": 738024
+          },
+          "S3": {
+            "hits": 625444,
+            "total": 787787
+          }
+        },
+        "country_recall": {
+          "India": {
+            "hits": 406812,
+            "total": 610096
+          },
+          "US": {
+            "hits": 799543,
+            "total": 915715
+          }
+        },
+        "all_true_s1_fraction": 0.5903814111440518,
+        "all_true_matched_s1_fraction": 0.5661573601009797
+      },
+      "incremental_true_hits_over_stage4": 281573,
+      "candidate_overlap_with_stage4": 2082316
+    }
+  },
+  "miss_samples": {
+    "5": [
+      {
+        "target_id": "S3-961854123",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-521020374",
+          "business_name": "Hari All Business",
+          "business_address": "Plot No. 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Shaikpet, Hyderabad, Telangana",
+          "name_norm": "hari all business",
+          "address_norm": "plot no 47 iii 8 2 293 82 jiii 47 rn 76 shaikpet hyderabad telangana"
+        },
+        "target": {
+          "entity_id": "S3-961854123",
+          "business_name": "హరి ఆల్ బిజినెస్",
+          "business_address": "H.no 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Hyderabad, Shaikpet, Andhra Pradesh",
+          "name_norm": "హరి ఆల్ బిజినెస్",
+          "address_norm": "h no 47 iii 8 2 293 82 jiii 47 rn 76 hyderabad shaikpet andhra pradesh"
+        }
+      },
+      {
+        "target_id": "S2-554833247",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-670000585",
+          "business_name": "Star & Brothers Private Limited",
+          "business_address": "12Th Floor, Dev Corpora, Near Cadbury Company, Near Khajana E.E. Highway, Khopat, Thane, Maharashtra",
+          "name_norm": "star brothers private limited",
+          "address_norm": "12th floor dev corpora near cadbury company near khajana e e highway khopat thane maharashtra"
+        },
+        "target": {
+          "entity_id": "S2-554833247",
+          "business_name": "Star +  Brothers Private Ltd",
+          "business_address": "#12TH FLOOR, DEV CORPORA, NEAR CADBURY COMPANY, NEAR KHAJANA E.E. HIGHWAY, KHOPAT, Maharashtra",
+          "name_norm": "star + brothers private ltd",
+          "address_norm": "12th floor dev corpora near cadbury company near khajana e e highway khopat maharashtra"
+        }
+      },
+      {
+        "target_id": "S2-634974154",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-160463661",
+          "business_name": "My Consulting Private Limited",
+          "business_address": "49/26, Ist Floor Ramasamy Kovil Agraharam, Palayamkottai, Tirunelveli, Tamil Nadu",
+          "name_norm": "my consulting private limited",
+          "address_norm": "49 26 ist floor ramasamy kovil agraharam palayamkottai tirunelveli tamil nadu"
+        },
+        "target": {
+          "entity_id": "S2-634974154",
+          "business_name": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+          "business_address": "49/26, PALAYAMKOTTAI, TIRUNELVELI, தமிழ்நாடு",
+          "name_norm": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+          "address_norm": "49 26 palayamkottai tirunelveli தமிழ்நாடு"
+        }
+      },
+      {
+        "target_id": "S3-454305563",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-251684948",
+          "business_name": "Charley, Fredericka A., DO",
+          "business_address": "15105 Oak Street, Dolton, IL",
+          "name_norm": "charley fredericka a do",
+          "address_norm": "15105 oak street dolton il"
+        },
+        "target": {
+          "entity_id": "S3-454305563",
+          "business_name": "frederickacharleya.com",
+          "business_address": "Dolton Towship, Illinois, 15105 Oak St",
+          "name_norm": "frederickacharleya com",
+          "address_norm": "dolton towship illinois 15105 oak st"
+        }
+      },
+      {
+        "target_id": "S2-909961405",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-216816542",
+          "business_name": "Green Engineering",
+          "business_address": "525 Ward 6, At Asha Nagar, More Pops -Soh Sarai, Bihar, Nalanda, Bihar",
+          "name_norm": "green engineering",
+          "address_norm": "525 ward 6 at asha nagar more pops soh sarai bihar nalanda bihar"
+        },
+        "target": {
+          "entity_id": "S2-909961405",
+          "business_name": "Green Green Engineering",
+          "business_address": "25 WARD 6, AT ASHA NAGAR, MORE POPS -SOH SARAI, BIHAR, Bihar",
+          "name_norm": "green green engineering",
+          "address_norm": "25 ward 6 at asha nagar more pops soh sarai bihar bihar"
+        }
+      },
+      {
+        "target_id": "S2-946804009",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-521515409",
+          "business_name": "Shakti Agro Private Limited",
+          "business_address": "G T Roadsherpur Ludhiana, Punjab, Ludhiana",
+          "name_norm": "shakti agro private limited",
+          "address_norm": "g t roadsherpur ludhiana punjab ludhiana"
+        },
+        "target": {
+          "entity_id": "S2-946804009",
+          "business_name": "Limited Shakti Private Partners",
+          "business_address": "ਪੰਜਾਬ, LUDHIANA, G T ROADSHERPUR LUDHIANA, LUDHIANA",
+          "name_norm": "limited shakti private partners",
+          "address_norm": "ਪੰਜਾਬ ludhiana g t roadsherpur ludhiana ludhiana"
+        }
+      },
+      {
+        "target_id": "S2-604637307",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-502888861",
+          "business_name": "Better Commercial Laboratories LLC",
+          "business_address": "42 Hunns Lake Road, Stanford, NY",
+          "name_norm": "better commercial laboratories llc",
+          "address_norm": "42 hunns lake road stanford ny"
+        },
+        "target": {
+          "entity_id": "S2-604637307",
+          "business_name": "BETTER COMMERCIAL",
+          "business_address": "42B HUNNS LAKE ROAD, STANFORD, NY",
+          "name_norm": "better commercial",
+          "address_norm": "42b hunns lake road stanford ny"
+        }
+      },
+      {
+        "target_id": "S2-479334485",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-875801955",
+          "business_name": "Downtown Ice Cream",
+          "business_address": "16621 33rd Avenue, Lynnwood, WA",
+          "name_norm": "downtown ice cream",
+          "address_norm": "16621 33rd avenue lynnwood wa"
+        },
+        "target": {
+          "entity_id": "S2-479334485",
+          "business_name": "Downtown Ice",
+          "business_address": "33ND AVE, LYNNWOOD, WA",
+          "name_norm": "downtown ice",
+          "address_norm": "33nd ave lynnwood wa"
+        }
+      },
+      {
+        "target_id": "S3-86984213",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-905781662",
+          "business_name": "Eastern Construction",
+          "business_address": "C/O Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, Uttar Pradesh",
+          "name_norm": "eastern construction",
+          "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur uttar pradesh"
+        },
+        "target": {
+          "entity_id": "S3-86984213",
+          "business_name": "ईस्टर्न कंस्ट्रक्शन",
+          "business_address": "C/o Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, उत्तर प्रदेश",
+          "name_norm": "ईस्टर्न कंस्ट्रक्शन",
+          "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur उत्तर प्रदेश"
+        }
+      },
+      {
+        "target_id": "S3-577357887",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-370645971",
+          "business_name": "Bombay Foundation LLP",
+          "business_address": "C/O Moradabad Road-Opp.Ekta Vihar Sambhal, Moradabad, Sambhal, Uttar Pradesh",
+          "name_norm": "bombay foundation llp",
+          "address_norm": "c o moradabad road opp ekta vihar sambhal moradabad sambhal uttar pradesh"
+        },
+        "target": {
+          "entity_id": "S3-577357887",
+          "business_name": "बॉम्बे फाउंडेशन एलएलपी",
+          "business_address": "Moradabad, Sambhal, उत्तर प्रदेश, C/o Moradabad Road-opp.ekta Vihar Sambhal",
+          "name_norm": "बॉम्बे फाउंडेशन एलएलपी",
+          "address_norm": "moradabad sambhal उत्तर प्रदेश c o moradabad road opp ekta vihar sambhal"
+        }
+      },
+      {
+        "target_id": "S2-106319943",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-106678782",
+          "business_name": "Vis College Pvt. Ltd.",
+          "business_address": "Shop No.2, Jayant Krupa Sector-9, Dive Village, Navi Mumbai, Maharashtra",
+          "name_norm": "vis college pvt ltd",
+          "address_norm": "shop no 2 jayant krupa sector 9 dive village navi mumbai maharashtra"
+        },
+        "target": {
+          "entity_id": "S2-106319943",
+          "business_name": "Mr EVOEVOJAX",
+          "business_address": "NAVI MUMBAI, महाराष्ट्र, NAVI MUMBAI, SHOP NO.2, JAYANT KRUPA SECTOR-9, DIVE VILLAGE",
+          "name_norm": "mr evoevojax",
+          "address_norm": "navi mumbai महाराष्ट्र navi mumbai shop no 2 jayant krupa sector 9 dive village"
+        }
+      },
+      {
+        "target_id": "S2-197425554",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-48680569",
+          "business_name": "Star Classic Ventures Private Limited",
+          "business_address": "120-25/164 Taj Mahal Colony, Peerzadiguda, Hyderabade, Hyderabad, Telangana",
+          "name_norm": "star classic ventures private limited",
+          "address_norm": "120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad telangana"
+        },
+        "target": {
+          "entity_id": "S2-197425554",
+          "business_name": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+          "business_address": "G-120-25/164 TAJ MAHAL COLONY, PEERZADIGUDA, HYDERABADE, HYDERABAD, Andhra Pradesh",
+          "name_norm": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+          "address_norm": "g 120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad andhra pradesh"
+        }
+      },
+      {
+        "target_id": "S2-495340863",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-833391908",
+          "business_name": "Modern Infotech Private Limited",
+          "business_address": "No.174, 2Nd Floor, 2Nd Cross, 7Th Main, 1St Block, Koramangala, Bangalore, Karnataka",
+          "name_norm": "modern infotech private limited",
+          "address_norm": "no 174 2nd floor 2nd cross 7th main 1st block koramangala bangalore karnataka"
+        },
+        "target": {
+          "entity_id": "S2-495340863",
+          "business_name": "ಮಾಡರ್ನ್ ಇನ್‌ಫೋಟೆಕ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "business_address": "NO.174, BANGALORE, ಕರ್ನಾಟಕ",
+          "name_norm": "ಮಾಡರ್ನ್ ಇನ್‌ಫೋಟೆಕ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "address_norm": "no 174 bangalore ಕರ್ನಾಟಕ"
+        }
+      },
+      {
+        "target_id": "S3-689689104",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-108694605",
+          "business_name": "Primary Care Partners",
+          "business_address": "ME, 42 Hillis Street, Portland",
+          "name_norm": "primary care partners",
+          "address_norm": "me 42 hillis street portland"
+        },
+        "target": {
+          "entity_id": "S3-689689104",
+          "business_name": "The Primary Care Partners",
+          "business_address": "",
+          "name_norm": "the primary care partners",
+          "address_norm": ""
+        }
+      },
+      {
+        "target_id": "S2-892319502",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-30008742",
+          "business_name": "East Constructions Pvt Ltd",
+          "business_address": "C/O Akbar Ali Khan Vill Dewli, Ps Po Raghunathganj, Murshidabad, West Bengal",
+          "name_norm": "east constructions pvt ltd",
+          "address_norm": "c o akbar ali khan vill dewli ps po raghunathganj murshidabad west bengal"
+        },
+        "target": {
+          "entity_id": "S2-892319502",
+          "business_name": "ইস্ট কনস্ট্রাকশনস প্রাইভেট লিমিটেড",
+          "business_address": "MURSHIDABAD, C/O AKBAR ALI KHAN VILL DEWLI, West Bengal, PS PO RAGHUNATHGANJ",
+          "name_norm": "ইস্ট কনস্ট্রাকশনস প্রাইভেট লিমিটেড",
+          "address_norm": "murshidabad c o akbar ali khan vill dewli west bengal ps po raghunathganj"
+        }
+      },
+      {
+        "target_id": "S3-798007045",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-212604968",
+          "business_name": "Total Energy International LLC",
+          "business_address": "1632 Rockwell Court, Village Of Howard, WI",
+          "name_norm": "total energy international llc",
+          "address_norm": "1632 rockwell court village of howard wi"
+        },
+        "target": {
+          "entity_id": "S3-798007045",
+          "business_name": "Totalenergyintl.Com",
+          "business_address": "Rockwell Court, Village Of Howard, Wisconsin",
+          "name_norm": "totalenergyintl com",
+          "address_norm": "rockwell court village of howard wisconsin"
+        }
+      },
+      {
+        "target_id": "S2-100070337",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-36665438",
+          "business_name": "Shree Logistics Private Limited",
+          "business_address": "Nand Bhawan Main Market Near Patrick'S Bureau Office, Baran, Rajasthan",
+          "name_norm": "shree logistics private limited",
+          "address_norm": "nand bhawan main market near patrick s bureau office baran rajasthan"
+        },
+        "target": {
+          "entity_id": "S2-100070337",
+          "business_name": "Novimira",
+          "business_address": "NAND BHAWAN MAIN MARKET NEAR PATRICK'S BUREAU OFFICE, BARAN, Rajasthan",
+          "name_norm": "novimira",
+          "address_norm": "nand bhawan main market near patrick s bureau office baran rajasthan"
+        }
+      },
+      {
+        "target_id": "S3-949922323",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-708579475",
+          "business_name": "High United Consulting",
+          "business_address": "103 E Green Valley, Indore, Madhya Pradesh",
+          "name_norm": "high united consulting",
+          "address_norm": "103 e green valley indore madhya pradesh"
+        },
+        "target": {
+          "entity_id": "S3-949922323",
+          "business_name": "#highunited",
+          "business_address": "#103 E Green Valley, Dewas, MP",
+          "name_norm": "highunited",
+          "address_norm": "103 e green valley dewas mp"
+        }
+      },
+      {
+        "target_id": "S3-726467438",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-573133231",
+          "business_name": "N 6 Z Kochav",
+          "business_address": "3001 Randolph Road, Unit GF16, Phoenix, AZ",
+          "name_norm": "n 6 z kochav",
+          "address_norm": "3001 randolph road unit gf16 phoenix az"
+        },
+        "target": {
+          "entity_id": "S3-726467438",
+          "business_name": "N  6 Z",
+          "business_address": "Randolph Road, Phoenix, Arizona",
+          "name_norm": "n 6 z",
+          "address_norm": "randolph road phoenix arizona"
+        }
+      },
+      {
+        "target_id": "S2-961064678",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-226093814",
+          "business_name": "Keystone Telecom Group",
+          "business_address": "5305 Fox Hill Lane, Dallas, TX",
+          "name_norm": "keystone telecom group",
+          "address_norm": "5305 fox hill lane dallas tx"
+        },
+        "target": {
+          "entity_id": "S2-961064678",
+          "business_name": "Keystone Group Partners",
+          "business_address": "Fox Hill Lane, DALLAS, TX",
+          "name_norm": "keystone group partners",
+          "address_norm": "fox hill lane dallas tx"
+        }
+      },
+      {
+        "target_id": "S3-325608094",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-950428644",
+          "business_name": "KM Friday Private Limited",
+          "business_address": "No.16, Krishna Street, Sri Venkateswara Nagar, Anakaputhur, Chennai, Kancheepuram, Tamil Nadu",
+          "name_norm": "km friday private limited",
+          "address_norm": "no 16 krishna street sri venkateswara nagar anakaputhur chennai kancheepuram tamil nadu"
+        },
+        "target": {
+          "entity_id": "S3-325608094",
+          "business_name": "*** KM Finrddoay Private Limited",
+          "business_address": "No 16, Chennai, Kancheepuram, தமிழ்நாடு",
+          "name_norm": "km finrddoay private limited",
+          "address_norm": "no 16 chennai kancheepuram தமிழ்நாடு"
+        }
+      },
+      {
+        "target_id": "S3-457810613",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-306998913",
+          "business_name": "High Developers",
+          "business_address": "No.40/44, Silanthi Kuttai, Kolathur Main Road, Ambattur, Tiruvallur, Tamil Nadu",
+          "name_norm": "high developers",
+          "address_norm": "no 40 44 silanthi kuttai kolathur main road ambattur tiruvallur tamil nadu"
+        },
+        "target": {
+          "entity_id": "S3-457810613",
+          "business_name": "High Developers LLP",
+          "business_address": "Door No 40/44, Silanthi Kuttai, Kolathur Main Road, Tiruvallur, TN",
+          "name_norm": "high developers llp",
+          "address_norm": "door no 40 44 silanthi kuttai kolathur main road tiruvallur tn"
+        }
+      },
+      {
+        "target_id": "S3-9795886",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-175089979",
+          "business_name": "Royal Aerospace Company Partners",
+          "business_address": "1620 Waterford Pointe Road, Lexington, NC",
+          "name_norm": "royal aerospace company partners",
+          "address_norm": "1620 waterford pointe road lexington nc"
+        },
+        "target": {
+          "entity_id": "S3-9795886",
+          "business_name": "Royalaerospacepartners.Com",
+          "business_address": "1620 Waterford Pointe Rd, Lexington, North Carolina",
+          "name_norm": "royalaerospacepartners com",
+          "address_norm": "1620 waterford pointe rd lexington north carolina"
+        }
+      },
+      {
+        "target_id": "S3-9144759",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-512145492",
+          "business_name": "Cornerstone Diana",
+          "business_address": "4721 Carters Valley Road, Unit PAD, Church Hill, TN",
+          "name_norm": "cornerstone diana",
+          "address_norm": "4721 carters valley road unit pad church hill tn"
+        },
+        "target": {
+          "entity_id": "S3-9144759",
+          "business_name": "Cornerstone Dna",
+          "business_address": "Tennessee, 004721 Carters Valley Rd, Church Hill",
+          "name_norm": "cornerstone dna",
+          "address_norm": "tennessee 004721 carters valley rd church hill"
+        }
+      },
+      {
+        "target_id": "S3-924928088",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-577958575",
+          "business_name": "Aeonian Consultants Private Limited",
+          "business_address": "No 401 E Block Bren Avalon Aprt Doddanakundi Extn, Bangalore, Bangalore Rural, Karnataka",
+          "name_norm": "aeonian consultants private limited",
+          "address_norm": "no 401 e block bren avalon aprt doddanakundi extn bangalore bangalore rural karnataka"
+        },
+        "target": {
+          "entity_id": "S3-924928088",
+          "business_name": "Ny1áirisyn",
+          "business_address": "No 401 E Block Bren Avalon Aprt Doddanakundi Extn, Bangalore, Bangalore Rural, KA",
+          "name_norm": "ny1áirisyn",
+          "address_norm": "no 401 e block bren avalon aprt doddanakundi extn bangalore bangalore rural ka"
+        }
+      }
+    ],
+    "10": [
+      {
+        "target_id": "S3-961854123",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-521020374",
+          "business_name": "Hari All Business",
+          "business_address": "Plot No. 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Shaikpet, Hyderabad, Telangana",
+          "name_norm": "hari all business",
+          "address_norm": "plot no 47 iii 8 2 293 82 jiii 47 rn 76 shaikpet hyderabad telangana"
+        },
+        "target": {
+          "entity_id": "S3-961854123",
+          "business_name": "హరి ఆల్ బిజినెస్",
+          "business_address": "H.no 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Hyderabad, Shaikpet, Andhra Pradesh",
+          "name_norm": "హరి ఆల్ బిజినెస్",
+          "address_norm": "h no 47 iii 8 2 293 82 jiii 47 rn 76 hyderabad shaikpet andhra pradesh"
+        }
+      },
+      {
+        "target_id": "S2-554833247",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-670000585",
+          "business_name": "Star & Brothers Private Limited",
+          "business_address": "12Th Floor, Dev Corpora, Near Cadbury Company, Near Khajana E.E. Highway, Khopat, Thane, Maharashtra",
+          "name_norm": "star brothers private limited",
+          "address_norm": "12th floor dev corpora near cadbury company near khajana e e highway khopat thane maharashtra"
+        },
+        "target": {
+          "entity_id": "S2-554833247",
+          "business_name": "Star +  Brothers Private Ltd",
+          "business_address": "#12TH FLOOR, DEV CORPORA, NEAR CADBURY COMPANY, NEAR KHAJANA E.E. HIGHWAY, KHOPAT, Maharashtra",
+          "name_norm": "star + brothers private ltd",
+          "address_norm": "12th floor dev corpora near cadbury company near khajana e e highway khopat maharashtra"
+        }
+      },
+      {
+        "target_id": "S2-634974154",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-160463661",
+          "business_name": "My Consulting Private Limited",
+          "business_address": "49/26, Ist Floor Ramasamy Kovil Agraharam, Palayamkottai, Tirunelveli, Tamil Nadu",
+          "name_norm": "my consulting private limited",
+          "address_norm": "49 26 ist floor ramasamy kovil agraharam palayamkottai tirunelveli tamil nadu"
+        },
+        "target": {
+          "entity_id": "S2-634974154",
+          "business_name": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+          "business_address": "49/26, PALAYAMKOTTAI, TIRUNELVELI, தமிழ்நாடு",
+          "name_norm": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+          "address_norm": "49 26 palayamkottai tirunelveli தமிழ்நாடு"
+        }
+      },
+      {
+        "target_id": "S2-909961405",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-216816542",
+          "business_name": "Green Engineering",
+          "business_address": "525 Ward 6, At Asha Nagar, More Pops -Soh Sarai, Bihar, Nalanda, Bihar",
+          "name_norm": "green engineering",
+          "address_norm": "525 ward 6 at asha nagar more pops soh sarai bihar nalanda bihar"
+        },
+        "target": {
+          "entity_id": "S2-909961405",
+          "business_name": "Green Green Engineering",
+          "business_address": "25 WARD 6, AT ASHA NAGAR, MORE POPS -SOH SARAI, BIHAR, Bihar",
+          "name_norm": "green green engineering",
+          "address_norm": "25 ward 6 at asha nagar more pops soh sarai bihar bihar"
+        }
+      },
+      {
+        "target_id": "S2-946804009",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-521515409",
+          "business_name": "Shakti Agro Private Limited",
+          "business_address": "G T Roadsherpur Ludhiana, Punjab, Ludhiana",
+          "name_norm": "shakti agro private limited",
+          "address_norm": "g t roadsherpur ludhiana punjab ludhiana"
+        },
+        "target": {
+          "entity_id": "S2-946804009",
+          "business_name": "Limited Shakti Private Partners",
+          "business_address": "ਪੰਜਾਬ, LUDHIANA, G T ROADSHERPUR LUDHIANA, LUDHIANA",
+          "name_norm": "limited shakti private partners",
+          "address_norm": "ਪੰਜਾਬ ludhiana g t roadsherpur ludhiana ludhiana"
+        }
+      },
+      {
+        "target_id": "S2-604637307",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-502888861",
+          "business_name": "Better Commercial Laboratories LLC",
+          "business_address": "42 Hunns Lake Road, Stanford, NY",
+          "name_norm": "better commercial laboratories llc",
+          "address_norm": "42 hunns lake road stanford ny"
+        },
+        "target": {
+          "entity_id": "S2-604637307",
+          "business_name": "BETTER COMMERCIAL",
+          "business_address": "42B HUNNS LAKE ROAD, STANFORD, NY",
+          "name_norm": "better commercial",
+          "address_norm": "42b hunns lake road stanford ny"
+        }
+      },
+      {
+        "target_id": "S2-479334485",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-875801955",
+          "business_name": "Downtown Ice Cream",
+          "business_address": "16621 33rd Avenue, Lynnwood, WA",
+          "name_norm": "downtown ice cream",
+          "address_norm": "16621 33rd avenue lynnwood wa"
+        },
+        "target": {
+          "entity_id": "S2-479334485",
+          "business_name": "Downtown Ice",
+          "business_address": "33ND AVE, LYNNWOOD, WA",
+          "name_norm": "downtown ice",
+          "address_norm": "33nd ave lynnwood wa"
+        }
+      },
+      {
+        "target_id": "S3-86984213",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-905781662",
+          "business_name": "Eastern Construction",
+          "business_address": "C/O Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, Uttar Pradesh",
+          "name_norm": "eastern construction",
+          "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur uttar pradesh"
+        },
+        "target": {
+          "entity_id": "S3-86984213",
+          "business_name": "ईस्टर्न कंस्ट्रक्शन",
+          "business_address": "C/o Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, उत्तर प्रदेश",
+          "name_norm": "ईस्टर्न कंस्ट्रक्शन",
+          "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur उत्तर प्रदेश"
+        }
+      },
+      {
+        "target_id": "S3-577357887",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-370645971",
+          "business_name": "Bombay Foundation LLP",
+          "business_address": "C/O Moradabad Road-Opp.Ekta Vihar Sambhal, Moradabad, Sambhal, Uttar Pradesh",
+          "name_norm": "bombay foundation llp",
+          "address_norm": "c o moradabad road opp ekta vihar sambhal moradabad sambhal uttar pradesh"
+        },
+        "target": {
+          "entity_id": "S3-577357887",
+          "business_name": "बॉम्बे फाउंडेशन एलएलपी",
+          "business_address": "Moradabad, Sambhal, उत्तर प्रदेश, C/o Moradabad Road-opp.ekta Vihar Sambhal",
+          "name_norm": "बॉम्बे फाउंडेशन एलएलपी",
+          "address_norm": "moradabad sambhal उत्तर प्रदेश c o moradabad road opp ekta vihar sambhal"
+        }
+      },
+      {
+        "target_id": "S2-106319943",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-106678782",
+          "business_name": "Vis College Pvt. Ltd.",
+          "business_address": "Shop No.2, Jayant Krupa Sector-9, Dive Village, Navi Mumbai, Maharashtra",
+          "name_norm": "vis college pvt ltd",
+          "address_norm": "shop no 2 jayant krupa sector 9 dive village navi mumbai maharashtra"
+        },
+        "target": {
+          "entity_id": "S2-106319943",
+          "business_name": "Mr EVOEVOJAX",
+          "business_address": "NAVI MUMBAI, महाराष्ट्र, NAVI MUMBAI, SHOP NO.2, JAYANT KRUPA SECTOR-9, DIVE VILLAGE",
+          "name_norm": "mr evoevojax",
+          "address_norm": "navi mumbai महाराष्ट्र navi mumbai shop no 2 jayant krupa sector 9 dive village"
+        }
+      },
+      {
+        "target_id": "S2-197425554",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-48680569",
+          "business_name": "Star Classic Ventures Private Limited",
+          "business_address": "120-25/164 Taj Mahal Colony, Peerzadiguda, Hyderabade, Hyderabad, Telangana",
+          "name_norm": "star classic ventures private limited",
+          "address_norm": "120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad telangana"
+        },
+        "target": {
+          "entity_id": "S2-197425554",
+          "business_name": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+          "business_address": "G-120-25/164 TAJ MAHAL COLONY, PEERZADIGUDA, HYDERABADE, HYDERABAD, Andhra Pradesh",
+          "name_norm": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+          "address_norm": "g 120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad andhra pradesh"
+        }
+      },
+      {
+        "target_id": "S2-495340863",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-833391908",
+          "business_name": "Modern Infotech Private Limited",
+          "business_address": "No.174, 2Nd Floor, 2Nd Cross, 7Th Main, 1St Block, Koramangala, Bangalore, Karnataka",
+          "name_norm": "modern infotech private limited",
+          "address_norm": "no 174 2nd floor 2nd cross 7th main 1st block koramangala bangalore karnataka"
+        },
+        "target": {
+          "entity_id": "S2-495340863",
+          "business_name": "ಮಾಡರ್ನ್ ಇನ್‌ಫೋಟೆಕ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "business_address": "NO.174, BANGALORE, ಕರ್ನಾಟಕ",
+          "name_norm": "ಮಾಡರ್ನ್ ಇನ್‌ಫೋಟೆಕ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "address_norm": "no 174 bangalore ಕರ್ನಾಟಕ"
+        }
+      },
+      {
+        "target_id": "S3-689689104",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-108694605",
+          "business_name": "Primary Care Partners",
+          "business_address": "ME, 42 Hillis Street, Portland",
+          "name_norm": "primary care partners",
+          "address_norm": "me 42 hillis street portland"
+        },
+        "target": {
+          "entity_id": "S3-689689104",
+          "business_name": "The Primary Care Partners",
+          "business_address": "",
+          "name_norm": "the primary care partners",
+          "address_norm": ""
+        }
+      },
+      {
+        "target_id": "S2-892319502",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-30008742",
+          "business_name": "East Constructions Pvt Ltd",
+          "business_address": "C/O Akbar Ali Khan Vill Dewli, Ps Po Raghunathganj, Murshidabad, West Bengal",
+          "name_norm": "east constructions pvt ltd",
+          "address_norm": "c o akbar ali khan vill dewli ps po raghunathganj murshidabad west bengal"
+        },
+        "target": {
+          "entity_id": "S2-892319502",
+          "business_name": "ইস্ট কনস্ট্রাকশনস প্রাইভেট লিমিটেড",
+          "business_address": "MURSHIDABAD, C/O AKBAR ALI KHAN VILL DEWLI, West Bengal, PS PO RAGHUNATHGANJ",
+          "name_norm": "ইস্ট কনস্ট্রাকশনস প্রাইভেট লিমিটেড",
+          "address_norm": "murshidabad c o akbar ali khan vill dewli west bengal ps po raghunathganj"
+        }
+      },
+      {
+        "target_id": "S3-798007045",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-212604968",
+          "business_name": "Total Energy International LLC",
+          "business_address": "1632 Rockwell Court, Village Of Howard, WI",
+          "name_norm": "total energy international llc",
+          "address_norm": "1632 rockwell court village of howard wi"
+        },
+        "target": {
+          "entity_id": "S3-798007045",
+          "business_name": "Totalenergyintl.Com",
+          "business_address": "Rockwell Court, Village Of Howard, Wisconsin",
+          "name_norm": "totalenergyintl com",
+          "address_norm": "rockwell court village of howard wisconsin"
+        }
+      },
+      {
+        "target_id": "S2-100070337",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-36665438",
+          "business_name": "Shree Logistics Private Limited",
+          "business_address": "Nand Bhawan Main Market Near Patrick'S Bureau Office, Baran, Rajasthan",
+          "name_norm": "shree logistics private limited",
+          "address_norm": "nand bhawan main market near patrick s bureau office baran rajasthan"
+        },
+        "target": {
+          "entity_id": "S2-100070337",
+          "business_name": "Novimira",
+          "business_address": "NAND BHAWAN MAIN MARKET NEAR PATRICK'S BUREAU OFFICE, BARAN, Rajasthan",
+          "name_norm": "novimira",
+          "address_norm": "nand bhawan main market near patrick s bureau office baran rajasthan"
+        }
+      },
+      {
+        "target_id": "S3-949922323",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-708579475",
+          "business_name": "High United Consulting",
+          "business_address": "103 E Green Valley, Indore, Madhya Pradesh",
+          "name_norm": "high united consulting",
+          "address_norm": "103 e green valley indore madhya pradesh"
+        },
+        "target": {
+          "entity_id": "S3-949922323",
+          "business_name": "#highunited",
+          "business_address": "#103 E Green Valley, Dewas, MP",
+          "name_norm": "highunited",
+          "address_norm": "103 e green valley dewas mp"
+        }
+      },
+      {
+        "target_id": "S3-726467438",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-573133231",
+          "business_name": "N 6 Z Kochav",
+          "business_address": "3001 Randolph Road, Unit GF16, Phoenix, AZ",
+          "name_norm": "n 6 z kochav",
+          "address_norm": "3001 randolph road unit gf16 phoenix az"
+        },
+        "target": {
+          "entity_id": "S3-726467438",
+          "business_name": "N  6 Z",
+          "business_address": "Randolph Road, Phoenix, Arizona",
+          "name_norm": "n 6 z",
+          "address_norm": "randolph road phoenix arizona"
+        }
+      },
+      {
+        "target_id": "S2-961064678",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-226093814",
+          "business_name": "Keystone Telecom Group",
+          "business_address": "5305 Fox Hill Lane, Dallas, TX",
+          "name_norm": "keystone telecom group",
+          "address_norm": "5305 fox hill lane dallas tx"
+        },
+        "target": {
+          "entity_id": "S2-961064678",
+          "business_name": "Keystone Group Partners",
+          "business_address": "Fox Hill Lane, DALLAS, TX",
+          "name_norm": "keystone group partners",
+          "address_norm": "fox hill lane dallas tx"
+        }
+      },
+      {
+        "target_id": "S3-325608094",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-950428644",
+          "business_name": "KM Friday Private Limited",
+          "business_address": "No.16, Krishna Street, Sri Venkateswara Nagar, Anakaputhur, Chennai, Kancheepuram, Tamil Nadu",
+          "name_norm": "km friday private limited",
+          "address_norm": "no 16 krishna street sri venkateswara nagar anakaputhur chennai kancheepuram tamil nadu"
+        },
+        "target": {
+          "entity_id": "S3-325608094",
+          "business_name": "*** KM Finrddoay Private Limited",
+          "business_address": "No 16, Chennai, Kancheepuram, தமிழ்நாடு",
+          "name_norm": "km finrddoay private limited",
+          "address_norm": "no 16 chennai kancheepuram தமிழ்நாடு"
+        }
+      },
+      {
+        "target_id": "S3-457810613",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-306998913",
+          "business_name": "High Developers",
+          "business_address": "No.40/44, Silanthi Kuttai, Kolathur Main Road, Ambattur, Tiruvallur, Tamil Nadu",
+          "name_norm": "high developers",
+          "address_norm": "no 40 44 silanthi kuttai kolathur main road ambattur tiruvallur tamil nadu"
+        },
+        "target": {
+          "entity_id": "S3-457810613",
+          "business_name": "High Developers LLP",
+          "business_address": "Door No 40/44, Silanthi Kuttai, Kolathur Main Road, Tiruvallur, TN",
+          "name_norm": "high developers llp",
+          "address_norm": "door no 40 44 silanthi kuttai kolathur main road tiruvallur tn"
+        }
+      },
+      {
+        "target_id": "S3-9795886",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-175089979",
+          "business_name": "Royal Aerospace Company Partners",
+          "business_address": "1620 Waterford Pointe Road, Lexington, NC",
+          "name_norm": "royal aerospace company partners",
+          "address_norm": "1620 waterford pointe road lexington nc"
+        },
+        "target": {
+          "entity_id": "S3-9795886",
+          "business_name": "Royalaerospacepartners.Com",
+          "business_address": "1620 Waterford Pointe Rd, Lexington, North Carolina",
+          "name_norm": "royalaerospacepartners com",
+          "address_norm": "1620 waterford pointe rd lexington north carolina"
+        }
+      },
+      {
+        "target_id": "S3-9144759",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-512145492",
+          "business_name": "Cornerstone Diana",
+          "business_address": "4721 Carters Valley Road, Unit PAD, Church Hill, TN",
+          "name_norm": "cornerstone diana",
+          "address_norm": "4721 carters valley road unit pad church hill tn"
+        },
+        "target": {
+          "entity_id": "S3-9144759",
+          "business_name": "Cornerstone Dna",
+          "business_address": "Tennessee, 004721 Carters Valley Rd, Church Hill",
+          "name_norm": "cornerstone dna",
+          "address_norm": "tennessee 004721 carters valley rd church hill"
+        }
+      },
+      {
+        "target_id": "S3-924928088",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-577958575",
+          "business_name": "Aeonian Consultants Private Limited",
+          "business_address": "No 401 E Block Bren Avalon Aprt Doddanakundi Extn, Bangalore, Bangalore Rural, Karnataka",
+          "name_norm": "aeonian consultants private limited",
+          "address_norm": "no 401 e block bren avalon aprt doddanakundi extn bangalore bangalore rural karnataka"
+        },
+        "target": {
+          "entity_id": "S3-924928088",
+          "business_name": "Ny1áirisyn",
+          "business_address": "No 401 E Block Bren Avalon Aprt Doddanakundi Extn, Bangalore, Bangalore Rural, KA",
+          "name_norm": "ny1áirisyn",
+          "address_norm": "no 401 e block bren avalon aprt doddanakundi extn bangalore bangalore rural ka"
+        }
+      },
+      {
+        "target_id": "S3-924197768",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-467956589",
+          "business_name": "Vpm (India) Pay Private Limited",
+          "business_address": "Delhi, New Delhi, D 1/84 First Floor Janakpuri Delhi, South West Delhi",
+          "name_norm": "vpm india pay private limited",
+          "address_norm": "delhi new delhi d 1 84 first floor janakpuri delhi south west delhi"
+        },
+        "target": {
+          "entity_id": "S3-924197768",
+          "business_name": "Deltadovafayeio a/k/a Vpm (India) Pay Private Limited",
+          "business_address": "D 1/84 First Floor Janakpuri Delhi, Delhi, New Delhi, South West Delhi",
+          "name_norm": "deltadovafayeio a k a vpm india pay private limited",
+          "address_norm": "d 1 84 first floor janakpuri delhi delhi new delhi south west delhi"
+        }
+      }
+    ],
+    "20": [
+      {
+        "target_id": "S3-961854123",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-521020374",
+          "business_name": "Hari All Business",
+          "business_address": "Plot No. 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Shaikpet, Hyderabad, Telangana",
+          "name_norm": "hari all business",
+          "address_norm": "plot no 47 iii 8 2 293 82 jiii 47 rn 76 shaikpet hyderabad telangana"
+        },
+        "target": {
+          "entity_id": "S3-961854123",
+          "business_name": "హరి ఆల్ బిజినెస్",
+          "business_address": "H.no 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Hyderabad, Shaikpet, Andhra Pradesh",
+          "name_norm": "హరి ఆల్ బిజినెస్",
+          "address_norm": "h no 47 iii 8 2 293 82 jiii 47 rn 76 hyderabad shaikpet andhra pradesh"
+        }
+      },
+      {
+        "target_id": "S2-634974154",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-160463661",
+          "business_name": "My Consulting Private Limited",
+          "business_address": "49/26, Ist Floor Ramasamy Kovil Agraharam, Palayamkottai, Tirunelveli, Tamil Nadu",
+          "name_norm": "my consulting private limited",
+          "address_norm": "49 26 ist floor ramasamy kovil agraharam palayamkottai tirunelveli tamil nadu"
+        },
+        "target": {
+          "entity_id": "S2-634974154",
+          "business_name": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+          "business_address": "49/26, PALAYAMKOTTAI, TIRUNELVELI, தமிழ்நாடு",
+          "name_norm": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+          "address_norm": "49 26 palayamkottai tirunelveli தமிழ்நாடு"
+        }
+      },
+      {
+        "target_id": "S2-909961405",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-216816542",
+          "business_name": "Green Engineering",
+          "business_address": "525 Ward 6, At Asha Nagar, More Pops -Soh Sarai, Bihar, Nalanda, Bihar",
+          "name_norm": "green engineering",
+          "address_norm": "525 ward 6 at asha nagar more pops soh sarai bihar nalanda bihar"
+        },
+        "target": {
+          "entity_id": "S2-909961405",
+          "business_name": "Green Green Engineering",
+          "business_address": "25 WARD 6, AT ASHA NAGAR, MORE POPS -SOH SARAI, BIHAR, Bihar",
+          "name_norm": "green green engineering",
+          "address_norm": "25 ward 6 at asha nagar more pops soh sarai bihar bihar"
+        }
+      },
+      {
+        "target_id": "S2-946804009",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-521515409",
+          "business_name": "Shakti Agro Private Limited",
+          "business_address": "G T Roadsherpur Ludhiana, Punjab, Ludhiana",
+          "name_norm": "shakti agro private limited",
+          "address_norm": "g t roadsherpur ludhiana punjab ludhiana"
+        },
+        "target": {
+          "entity_id": "S2-946804009",
+          "business_name": "Limited Shakti Private Partners",
+          "business_address": "ਪੰਜਾਬ, LUDHIANA, G T ROADSHERPUR LUDHIANA, LUDHIANA",
+          "name_norm": "limited shakti private partners",
+          "address_norm": "ਪੰਜਾਬ ludhiana g t roadsherpur ludhiana ludhiana"
+        }
+      },
+      {
+        "target_id": "S2-604637307",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-502888861",
+          "business_name": "Better Commercial Laboratories LLC",
+          "business_address": "42 Hunns Lake Road, Stanford, NY",
+          "name_norm": "better commercial laboratories llc",
+          "address_norm": "42 hunns lake road stanford ny"
+        },
+        "target": {
+          "entity_id": "S2-604637307",
+          "business_name": "BETTER COMMERCIAL",
+          "business_address": "42B HUNNS LAKE ROAD, STANFORD, NY",
+          "name_norm": "better commercial",
+          "address_norm": "42b hunns lake road stanford ny"
+        }
+      },
+      {
+        "target_id": "S2-479334485",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-875801955",
+          "business_name": "Downtown Ice Cream",
+          "business_address": "16621 33rd Avenue, Lynnwood, WA",
+          "name_norm": "downtown ice cream",
+          "address_norm": "16621 33rd avenue lynnwood wa"
+        },
+        "target": {
+          "entity_id": "S2-479334485",
+          "business_name": "Downtown Ice",
+          "business_address": "33ND AVE, LYNNWOOD, WA",
+          "name_norm": "downtown ice",
+          "address_norm": "33nd ave lynnwood wa"
+        }
+      },
+      {
+        "target_id": "S3-86984213",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-905781662",
+          "business_name": "Eastern Construction",
+          "business_address": "C/O Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, Uttar Pradesh",
+          "name_norm": "eastern construction",
+          "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur uttar pradesh"
+        },
+        "target": {
+          "entity_id": "S3-86984213",
+          "business_name": "ईस्टर्न कंस्ट्रक्शन",
+          "business_address": "C/o Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, उत्तर प्रदेश",
+          "name_norm": "ईस्टर्न कंस्ट्रक्शन",
+          "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur उत्तर प्रदेश"
+        }
+      },
+      {
+        "target_id": "S3-577357887",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-370645971",
+          "business_name": "Bombay Foundation LLP",
+          "business_address": "C/O Moradabad Road-Opp.Ekta Vihar Sambhal, Moradabad, Sambhal, Uttar Pradesh",
+          "name_norm": "bombay foundation llp",
+          "address_norm": "c o moradabad road opp ekta vihar sambhal moradabad sambhal uttar pradesh"
+        },
+        "target": {
+          "entity_id": "S3-577357887",
+          "business_name": "बॉम्बे फाउंडेशन एलएलपी",
+          "business_address": "Moradabad, Sambhal, उत्तर प्रदेश, C/o Moradabad Road-opp.ekta Vihar Sambhal",
+          "name_norm": "बॉम्बे फाउंडेशन एलएलपी",
+          "address_norm": "moradabad sambhal उत्तर प्रदेश c o moradabad road opp ekta vihar sambhal"
+        }
+      },
+      {
+        "target_id": "S2-106319943",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-106678782",
+          "business_name": "Vis College Pvt. Ltd.",
+          "business_address": "Shop No.2, Jayant Krupa Sector-9, Dive Village, Navi Mumbai, Maharashtra",
+          "name_norm": "vis college pvt ltd",
+          "address_norm": "shop no 2 jayant krupa sector 9 dive village navi mumbai maharashtra"
+        },
+        "target": {
+          "entity_id": "S2-106319943",
+          "business_name": "Mr EVOEVOJAX",
+          "business_address": "NAVI MUMBAI, महाराष्ट्र, NAVI MUMBAI, SHOP NO.2, JAYANT KRUPA SECTOR-9, DIVE VILLAGE",
+          "name_norm": "mr evoevojax",
+          "address_norm": "navi mumbai महाराष्ट्र navi mumbai shop no 2 jayant krupa sector 9 dive village"
+        }
+      },
+      {
+        "target_id": "S2-197425554",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-48680569",
+          "business_name": "Star Classic Ventures Private Limited",
+          "business_address": "120-25/164 Taj Mahal Colony, Peerzadiguda, Hyderabade, Hyderabad, Telangana",
+          "name_norm": "star classic ventures private limited",
+          "address_norm": "120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad telangana"
+        },
+        "target": {
+          "entity_id": "S2-197425554",
+          "business_name": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+          "business_address": "G-120-25/164 TAJ MAHAL COLONY, PEERZADIGUDA, HYDERABADE, HYDERABAD, Andhra Pradesh",
+          "name_norm": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+          "address_norm": "g 120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad andhra pradesh"
+        }
+      },
+      {
+        "target_id": "S2-495340863",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-833391908",
+          "business_name": "Modern Infotech Private Limited",
+          "business_address": "No.174, 2Nd Floor, 2Nd Cross, 7Th Main, 1St Block, Koramangala, Bangalore, Karnataka",
+          "name_norm": "modern infotech private limited",
+          "address_norm": "no 174 2nd floor 2nd cross 7th main 1st block koramangala bangalore karnataka"
+        },
+        "target": {
+          "entity_id": "S2-495340863",
+          "business_name": "ಮಾಡರ್ನ್ ಇನ್‌ಫೋಟೆಕ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "business_address": "NO.174, BANGALORE, ಕರ್ನಾಟಕ",
+          "name_norm": "ಮಾಡರ್ನ್ ಇನ್‌ಫೋಟೆಕ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "address_norm": "no 174 bangalore ಕರ್ನಾಟಕ"
+        }
+      },
+      {
+        "target_id": "S3-689689104",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-108694605",
+          "business_name": "Primary Care Partners",
+          "business_address": "ME, 42 Hillis Street, Portland",
+          "name_norm": "primary care partners",
+          "address_norm": "me 42 hillis street portland"
+        },
+        "target": {
+          "entity_id": "S3-689689104",
+          "business_name": "The Primary Care Partners",
+          "business_address": "",
+          "name_norm": "the primary care partners",
+          "address_norm": ""
+        }
+      },
+      {
+        "target_id": "S2-892319502",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-30008742",
+          "business_name": "East Constructions Pvt Ltd",
+          "business_address": "C/O Akbar Ali Khan Vill Dewli, Ps Po Raghunathganj, Murshidabad, West Bengal",
+          "name_norm": "east constructions pvt ltd",
+          "address_norm": "c o akbar ali khan vill dewli ps po raghunathganj murshidabad west bengal"
+        },
+        "target": {
+          "entity_id": "S2-892319502",
+          "business_name": "ইস্ট কনস্ট্রাকশনস প্রাইভেট লিমিটেড",
+          "business_address": "MURSHIDABAD, C/O AKBAR ALI KHAN VILL DEWLI, West Bengal, PS PO RAGHUNATHGANJ",
+          "name_norm": "ইস্ট কনস্ট্রাকশনস প্রাইভেট লিমিটেড",
+          "address_norm": "murshidabad c o akbar ali khan vill dewli west bengal ps po raghunathganj"
+        }
+      },
+      {
+        "target_id": "S3-798007045",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-212604968",
+          "business_name": "Total Energy International LLC",
+          "business_address": "1632 Rockwell Court, Village Of Howard, WI",
+          "name_norm": "total energy international llc",
+          "address_norm": "1632 rockwell court village of howard wi"
+        },
+        "target": {
+          "entity_id": "S3-798007045",
+          "business_name": "Totalenergyintl.Com",
+          "business_address": "Rockwell Court, Village Of Howard, Wisconsin",
+          "name_norm": "totalenergyintl com",
+          "address_norm": "rockwell court village of howard wisconsin"
+        }
+      },
+      {
+        "target_id": "S2-100070337",
+        "source": "S2",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-36665438",
+          "business_name": "Shree Logistics Private Limited",
+          "business_address": "Nand Bhawan Main Market Near Patrick'S Bureau Office, Baran, Rajasthan",
+          "name_norm": "shree logistics private limited",
+          "address_norm": "nand bhawan main market near patrick s bureau office baran rajasthan"
+        },
+        "target": {
+          "entity_id": "S2-100070337",
+          "business_name": "Novimira",
+          "business_address": "NAND BHAWAN MAIN MARKET NEAR PATRICK'S BUREAU OFFICE, BARAN, Rajasthan",
+          "name_norm": "novimira",
+          "address_norm": "nand bhawan main market near patrick s bureau office baran rajasthan"
+        }
+      },
+      {
+        "target_id": "S3-949922323",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-708579475",
+          "business_name": "High United Consulting",
+          "business_address": "103 E Green Valley, Indore, Madhya Pradesh",
+          "name_norm": "high united consulting",
+          "address_norm": "103 e green valley indore madhya pradesh"
+        },
+        "target": {
+          "entity_id": "S3-949922323",
+          "business_name": "#highunited",
+          "business_address": "#103 E Green Valley, Dewas, MP",
+          "name_norm": "highunited",
+          "address_norm": "103 e green valley dewas mp"
+        }
+      },
+      {
+        "target_id": "S3-726467438",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-573133231",
+          "business_name": "N 6 Z Kochav",
+          "business_address": "3001 Randolph Road, Unit GF16, Phoenix, AZ",
+          "name_norm": "n 6 z kochav",
+          "address_norm": "3001 randolph road unit gf16 phoenix az"
+        },
+        "target": {
+          "entity_id": "S3-726467438",
+          "business_name": "N  6 Z",
+          "business_address": "Randolph Road, Phoenix, Arizona",
+          "name_norm": "n 6 z",
+          "address_norm": "randolph road phoenix arizona"
+        }
+      },
+      {
+        "target_id": "S2-961064678",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-226093814",
+          "business_name": "Keystone Telecom Group",
+          "business_address": "5305 Fox Hill Lane, Dallas, TX",
+          "name_norm": "keystone telecom group",
+          "address_norm": "5305 fox hill lane dallas tx"
+        },
+        "target": {
+          "entity_id": "S2-961064678",
+          "business_name": "Keystone Group Partners",
+          "business_address": "Fox Hill Lane, DALLAS, TX",
+          "name_norm": "keystone group partners",
+          "address_norm": "fox hill lane dallas tx"
+        }
+      },
+      {
+        "target_id": "S3-325608094",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-950428644",
+          "business_name": "KM Friday Private Limited",
+          "business_address": "No.16, Krishna Street, Sri Venkateswara Nagar, Anakaputhur, Chennai, Kancheepuram, Tamil Nadu",
+          "name_norm": "km friday private limited",
+          "address_norm": "no 16 krishna street sri venkateswara nagar anakaputhur chennai kancheepuram tamil nadu"
+        },
+        "target": {
+          "entity_id": "S3-325608094",
+          "business_name": "*** KM Finrddoay Private Limited",
+          "business_address": "No 16, Chennai, Kancheepuram, தமிழ்நாடு",
+          "name_norm": "km finrddoay private limited",
+          "address_norm": "no 16 chennai kancheepuram தமிழ்நாடு"
+        }
+      },
+      {
+        "target_id": "S3-457810613",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-306998913",
+          "business_name": "High Developers",
+          "business_address": "No.40/44, Silanthi Kuttai, Kolathur Main Road, Ambattur, Tiruvallur, Tamil Nadu",
+          "name_norm": "high developers",
+          "address_norm": "no 40 44 silanthi kuttai kolathur main road ambattur tiruvallur tamil nadu"
+        },
+        "target": {
+          "entity_id": "S3-457810613",
+          "business_name": "High Developers LLP",
+          "business_address": "Door No 40/44, Silanthi Kuttai, Kolathur Main Road, Tiruvallur, TN",
+          "name_norm": "high developers llp",
+          "address_norm": "door no 40 44 silanthi kuttai kolathur main road tiruvallur tn"
+        }
+      },
+      {
+        "target_id": "S3-9795886",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-175089979",
+          "business_name": "Royal Aerospace Company Partners",
+          "business_address": "1620 Waterford Pointe Road, Lexington, NC",
+          "name_norm": "royal aerospace company partners",
+          "address_norm": "1620 waterford pointe road lexington nc"
+        },
+        "target": {
+          "entity_id": "S3-9795886",
+          "business_name": "Royalaerospacepartners.Com",
+          "business_address": "1620 Waterford Pointe Rd, Lexington, North Carolina",
+          "name_norm": "royalaerospacepartners com",
+          "address_norm": "1620 waterford pointe rd lexington north carolina"
+        }
+      },
+      {
+        "target_id": "S3-9144759",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-512145492",
+          "business_name": "Cornerstone Diana",
+          "business_address": "4721 Carters Valley Road, Unit PAD, Church Hill, TN",
+          "name_norm": "cornerstone diana",
+          "address_norm": "4721 carters valley road unit pad church hill tn"
+        },
+        "target": {
+          "entity_id": "S3-9144759",
+          "business_name": "Cornerstone Dna",
+          "business_address": "Tennessee, 004721 Carters Valley Rd, Church Hill",
+          "name_norm": "cornerstone dna",
+          "address_norm": "tennessee 004721 carters valley rd church hill"
+        }
+      },
+      {
+        "target_id": "S3-924928088",
+        "source": "S3",
+        "country": "India",
+        "s1": {
+          "entity_id": "S1-577958575",
+          "business_name": "Aeonian Consultants Private Limited",
+          "business_address": "No 401 E Block Bren Avalon Aprt Doddanakundi Extn, Bangalore, Bangalore Rural, Karnataka",
+          "name_norm": "aeonian consultants private limited",
+          "address_norm": "no 401 e block bren avalon aprt doddanakundi extn bangalore bangalore rural karnataka"
+        },
+        "target": {
+          "entity_id": "S3-924928088",
+          "business_name": "Ny1áirisyn",
+          "business_address": "No 401 E Block Bren Avalon Aprt Doddanakundi Extn, Bangalore, Bangalore Rural, KA",
+          "name_norm": "ny1áirisyn",
+          "address_norm": "no 401 e block bren avalon aprt doddanakundi extn bangalore bangalore rural ka"
+        }
+      },
+      {
+        "target_id": "S3-776181182",
+        "source": "S3",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-856360976",
+          "business_name": "Pioneer Intelligence Partners LLC",
+          "business_address": "43 Highridge Road, Bellingham, MA",
+          "name_norm": "pioneer intelligence partners llc",
+          "address_norm": "43 highridge road bellingham ma"
+        },
+        "target": {
+          "entity_id": "S3-776181182",
+          "business_name": "Pioneerintelligencepartners.Com",
+          "business_address": "43 Highridge Road, Bellingham, Massachusetts",
+          "name_norm": "pioneerintelligencepartners com",
+          "address_norm": "43 highridge road bellingham massachusetts"
+        }
+      },
+      {
+        "target_id": "S2-782242912",
+        "source": "S2",
+        "country": "US",
+        "s1": {
+          "entity_id": "S1-760683141",
+          "business_name": "TP Crystal Keystone",
+          "business_address": "1422 Phillip Drive, Jacksonville, AR",
+          "name_norm": "tp crystal keystone",
+          "address_norm": "1422 phillip drive jacksonville ar"
+        },
+        "target": {
+          "entity_id": "S2-782242912",
+          "business_name": "tpcrystalkeystone.com",
+          "business_address": "001422 PHILLIP DRIVE, AR, JACKSONILLE TOWNSHIP",
+          "name_norm": "tpcrystalkeystone com",
+          "address_norm": "001422 phillip drive ar jacksonille township"
+        }
+      }
+    ]
+  },
+  "stage4_recompute_seconds": 214.3145328999999,
+  "union_evaluation_seconds": 1307.3907737999998,
+  "approx_peak_rss_bytes": 2144653312
+}

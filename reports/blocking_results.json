@@ -1,0 +1,1348 @@
+{
+  "experiment_id": "blocking_baseline_v1",
+  "validation_s1": 440522,
+  "validation_singletons": 24597,
+  "target_corpus": {
+    "train_source2.tsv": 5034616,
+    "train_source3.tsv": 5285603
+  },
+  "true_matches": 1525811,
+  "true_targets_seen": 1525811,
+  "cross_country_true_matches": 0,
+  "rule_index_keys": {
+    "A_exact_name": 355975,
+    "B_name_signature": 354423,
+    "C1_exact_numeric_address": 319872,
+    "C2_numeric_plus_name_token": 615494
+  },
+  "rule_skipped_postings": {
+    "A_exact_name": 0,
+    "B_name_signature": 0,
+    "C1_exact_numeric_address": 0,
+    "C2_numeric_plus_name_token": 0
+  },
+  "metrics": {
+    "A_exact_name": {
+      "true_hits": 330361,
+      "true_total": 1525811,
+      "true_match_recall": 0.21651502053661953,
+      "all_true_s1_count": 36069,
+      "all_true_s1_fraction": 0.081877863080618,
+      "all_true_matched_s1_fraction": 0.02758189577447857,
+      "candidate_counts": {
+        "entities": 440522,
+        "total_pairs": 4304522,
+        "mean": 9.771412097466188,
+        "median": 1,
+        "p90": 15,
+        "p95": 60,
+        "p99": 175,
+        "max": 1039,
+        "zero_entities": 129208,
+        "zero_fraction": 0.2933065771970526
+      }
+    },
+    "B_name_signature": {
+      "true_hits": 402582,
+      "true_total": 1525811,
+      "true_match_recall": 0.2638478815528267,
+      "all_true_s1_count": 40093,
+      "all_true_s1_fraction": 0.09101248064795855,
+      "all_true_matched_s1_fraction": 0.037256716956182004,
+      "candidate_counts": {
+        "entities": 440522,
+        "total_pairs": 4648885,
+        "mean": 10.553127880105874,
+        "median": 2,
+        "p90": 19,
+        "p95": 63,
+        "p99": 176,
+        "max": 1040,
+        "zero_entities": 105530,
+        "zero_fraction": 0.23955670772401833
+      }
+    },
+    "C1_exact_numeric_address": {
+      "true_hits": 93367,
+      "true_total": 1525811,
+      "true_match_recall": 0.06119172033757785,
+      "all_true_s1_count": 26505,
+      "all_true_s1_fraction": 0.060167256118877153,
+      "all_true_matched_s1_fraction": 0.004587365510608884,
+      "candidate_counts": {
+        "entities": 440522,
+        "total_pairs": 115019,
+        "mean": 0.26109706212175554,
+        "median": 0,
+        "p90": 1,
+        "p95": 1,
+        "p99": 3,
+        "max": 20,
+        "zero_entities": 361226,
+        "zero_fraction": 0.819995369130259
+      }
+    },
+    "C2_numeric_plus_name_token": {
+      "true_hits": 744201,
+      "true_total": 1525811,
+      "true_match_recall": 0.48774127332939665,
+      "all_true_s1_count": 126132,
+      "all_true_s1_fraction": 0.2863239520387177,
+      "all_true_matched_s1_fraction": 0.24411853098515357,
+      "candidate_counts": {
+        "entities": 440522,
+        "total_pairs": 5969501,
+        "mean": 13.550971347628495,
+        "median": 3,
+        "p90": 35,
+        "p95": 66,
+        "p99": 175,
+        "max": 1051,
+        "zero_entities": 132959,
+        "zero_fraction": 0.30182147543142
+      }
+    },
+    "union": {
+      "true_hits": 924782,
+      "true_total": 1525811,
+      "true_match_recall": 0.6060921044611686,
+      "all_true_s1_count": 156570,
+      "all_true_s1_fraction": 0.35541925261394436,
+      "all_true_matched_s1_fraction": 0.317299993989301,
+      "candidate_counts": {
+        "entities": 440522,
+        "total_pairs": 10707669,
+        "mean": 24.30677469002683,
+        "median": 6,
+        "p90": 72,
+        "p95": 118,
+        "p99": 241,
+        "max": 1075,
+        "zero_entities": 35660,
+        "zero_fraction": 0.08094941909825162
+      }
+    }
+  },
+  "exclusive_true_hits": {
+    "C2_numeric_plus_name_token": 443902,
+    "B_name_signature": 31614,
+    "C1_exact_numeric_address": 13901,
+    "A_exact_name": 1410
+  },
+  "incremental_true_hits": {
+    "C1_exact_numeric_address": 73949,
+    "A_exact_name": 330361,
+    "C2_numeric_plus_name_token": 443902,
+    "B_name_signature": 76570
+  },
+  "source_recall": {
+    "S2": {
+      "hits": 440542,
+      "total": 738024
+    },
+    "S3": {
+      "hits": 484240,
+      "total": 787787
+    }
+  },
+  "country_recall": {
+    "India": {
+      "hits": 268128,
+      "total": 610096
+    },
+    "US": {
+      "hits": 656654,
+      "total": 915715
+    }
+  },
+  "match_count_recall": {
+    "1": {
+      "hits": 14251,
+      "total": 23704
+    },
+    "2": {
+      "hits": 89872,
+      "total": 149432
+    },
+    "3": {
+      "hits": 192850,
+      "total": 318288
+    },
+    "4": {
+      "hits": 234272,
+      "total": 386088
+    },
+    "5": {
+      "hits": 194723,
+      "total": 321105
+    },
+    "6": {
+      "hits": 120864,
+      "total": 199068
+    },
+    "7": {
+      "hits": 54712,
+      "total": 89880
+    },
+    "8": {
+      "hits": 18015,
+      "total": 29584
+    },
+    "9": {
+      "hits": 4610,
+      "total": 7578
+    },
+    "10": {
+      "hits": 584,
+      "total": 1040
+    },
+    "11": {
+      "hits": 29,
+      "total": 44
+    }
+  },
+  "singleton_candidates": {
+    "entities": 24597,
+    "total_pairs": 552385,
+    "mean": 22.45741350571208,
+    "median": 3,
+    "p90": 71,
+    "p95": 119,
+    "p99": 237,
+    "max": 609,
+    "zero_entities": 8256,
+    "zero_fraction": 0.3356506891084279
+  },
+  "wall_seconds": 1214.4914626,
+  "s1_load_seconds": 22.16157750000002,
+  "index_and_truth_seconds": 37.64263570000003,
+  "approx_peak_rss_bytes": 969584640,
+  "miss_sample_seed": 2026,
+  "miss_sample": [
+    {
+      "sample_hash": 20932131682583,
+      "s1": {
+        "entity_id": "S1-731436000",
+        "country": "India",
+        "business_name": "Sadar Crafts Private Limited",
+        "business_address": "Hn 76/F65, Imliya, Sadar, Mau, Uttar Pradesh",
+        "name_norm": "sadar crafts private limited",
+        "address_norm": "hn 76 f65 imliya sadar mau uttar pradesh",
+        "name_tokens": [
+          "sadar",
+          "crafts",
+          "private",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "76",
+          "65"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-605343849",
+        "country": "India",
+        "business_name": "Sadar Crafts Prsiem Limited",
+        "business_address": "Mau, Imliya, Sadar, Hn 76/F65, UP",
+        "name_norm": "sadar crafts prsiem limited",
+        "address_norm": "mau imliya sadar hn 76 f65 up",
+        "name_tokens": [
+          "sadar",
+          "crafts",
+          "prsiem",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "76",
+          "65"
+        ]
+      },
+      "source": "S3",
+      "country": "India",
+      "shared_name_tokens": [
+        "crafts",
+        "limited",
+        "sadar"
+      ],
+      "shared_address_numbers": [
+        "65",
+        "76"
+      ]
+    },
+    {
+      "sample_hash": 42868889676662,
+      "s1": {
+        "entity_id": "S1-521020374",
+        "country": "India",
+        "business_name": "Hari All Business",
+        "business_address": "Plot No. 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Shaikpet, Hyderabad, Telangana",
+        "name_norm": "hari all business",
+        "address_norm": "plot no 47 iii 8 2 293 82 jiii 47 rn 76 shaikpet hyderabad telangana",
+        "name_tokens": [
+          "hari",
+          "all",
+          "business"
+        ],
+        "address_numeric_tokens": [
+          "47",
+          "8",
+          "2",
+          "293",
+          "82",
+          "47",
+          "76"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-961854123",
+        "country": "India",
+        "business_name": "హరి ఆల్ బిజినెస్",
+        "business_address": "H.no 47-Iii, 8-2-293/82/Jiii/47, Rn 76, Hyderabad, Shaikpet, Andhra Pradesh",
+        "name_norm": "హరి ఆల్ బిజినెస్",
+        "address_norm": "h no 47 iii 8 2 293 82 jiii 47 rn 76 hyderabad shaikpet andhra pradesh",
+        "name_tokens": [
+          "హరి",
+          "ఆల్",
+          "బిజినెస్"
+        ],
+        "address_numeric_tokens": [
+          "47",
+          "8",
+          "2",
+          "293",
+          "82",
+          "47",
+          "76"
+        ]
+      },
+      "source": "S3",
+      "country": "India",
+      "shared_name_tokens": [],
+      "shared_address_numbers": [
+        "2",
+        "293",
+        "47",
+        "76",
+        "8",
+        "82"
+      ]
+    },
+    {
+      "sample_hash": 64238125644879,
+      "s1": {
+        "entity_id": "S1-670000585",
+        "country": "India",
+        "business_name": "Star & Brothers Private Limited",
+        "business_address": "12Th Floor, Dev Corpora, Near Cadbury Company, Near Khajana E.E. Highway, Khopat, Thane, Maharashtra",
+        "name_norm": "star brothers private limited",
+        "address_norm": "12th floor dev corpora near cadbury company near khajana e e highway khopat thane maharashtra",
+        "name_tokens": [
+          "star",
+          "brothers",
+          "private",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "12"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-554833247",
+        "country": "India",
+        "business_name": "Star +  Brothers Private Ltd",
+        "business_address": "#12TH FLOOR, DEV CORPORA, NEAR CADBURY COMPANY, NEAR KHAJANA E.E. HIGHWAY, KHOPAT, Maharashtra",
+        "name_norm": "star + brothers private ltd",
+        "address_norm": "12th floor dev corpora near cadbury company near khajana e e highway khopat maharashtra",
+        "name_tokens": [
+          "star",
+          "+",
+          "brothers",
+          "private",
+          "ltd"
+        ],
+        "address_numeric_tokens": [
+          "12"
+        ]
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [
+        "brothers",
+        "private",
+        "star"
+      ],
+      "shared_address_numbers": [
+        "12"
+      ]
+    },
+    {
+      "sample_hash": 98443149928671,
+      "s1": {
+        "entity_id": "S1-34119872",
+        "country": "India",
+        "business_name": "Ever Services Ltd",
+        "business_address": "Vadodara, Gujarat, Vadodara, 292 Dharmsinh Desia Margnr Baroda Co Op Ind Estate Chhani Road",
+        "name_norm": "ever services ltd",
+        "address_norm": "vadodara gujarat vadodara 292 dharmsinh desia margnr baroda co op ind estate chhani road",
+        "name_tokens": [
+          "ever",
+          "services",
+          "ltd"
+        ],
+        "address_numeric_tokens": [
+          "292"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-868885400",
+        "country": "India",
+        "business_name": "Ever Services Limited",
+        "business_address": "2-92 DHARMSINH DESIA MARGNR BARODA CO OP IND ESTATE CHHANI ROAD, VADODARA, ગુજરાત",
+        "name_norm": "ever services limited",
+        "address_norm": "2 92 dharmsinh desia margnr baroda co op ind estate chhani road vadodara ગુજરાત",
+        "name_tokens": [
+          "ever",
+          "services",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "2",
+          "92"
+        ]
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [
+        "ever",
+        "services"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 130899445185251,
+      "s1": {
+        "entity_id": "S1-160463661",
+        "country": "India",
+        "business_name": "My Consulting Private Limited",
+        "business_address": "49/26, Ist Floor Ramasamy Kovil Agraharam, Palayamkottai, Tirunelveli, Tamil Nadu",
+        "name_norm": "my consulting private limited",
+        "address_norm": "49 26 ist floor ramasamy kovil agraharam palayamkottai tirunelveli tamil nadu",
+        "name_tokens": [
+          "my",
+          "consulting",
+          "private",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "49",
+          "26"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-634974154",
+        "country": "India",
+        "business_name": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+        "business_address": "49/26, PALAYAMKOTTAI, TIRUNELVELI, தமிழ்நாடு",
+        "name_norm": "மை கன்சல்டிங் பிரைவேட் லிமிடெட்",
+        "address_norm": "49 26 palayamkottai tirunelveli தமிழ்நாடு",
+        "name_tokens": [
+          "மை",
+          "கன்சல்டிங்",
+          "பிரைவேட்",
+          "லிமிடெட்"
+        ],
+        "address_numeric_tokens": [
+          "49",
+          "26"
+        ]
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [],
+      "shared_address_numbers": [
+        "26",
+        "49"
+      ]
+    },
+    {
+      "sample_hash": 148015376124526,
+      "s1": {
+        "entity_id": "S1-251684948",
+        "country": "US",
+        "business_name": "Charley, Fredericka A., DO",
+        "business_address": "15105 Oak Street, Dolton, IL",
+        "name_norm": "charley fredericka a do",
+        "address_norm": "15105 oak street dolton il",
+        "name_tokens": [
+          "charley",
+          "fredericka",
+          "a",
+          "do"
+        ],
+        "address_numeric_tokens": [
+          "15105"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-454305563",
+        "country": "US",
+        "business_name": "frederickacharleya.com",
+        "business_address": "Dolton Towship, Illinois, 15105 Oak St",
+        "name_norm": "frederickacharleya com",
+        "address_norm": "dolton towship illinois 15105 oak st",
+        "name_tokens": [
+          "frederickacharleya",
+          "com"
+        ],
+        "address_numeric_tokens": [
+          "15105"
+        ]
+      },
+      "source": "S3",
+      "country": "US",
+      "shared_name_tokens": [],
+      "shared_address_numbers": [
+        "15105"
+      ]
+    },
+    {
+      "sample_hash": 168321298039602,
+      "s1": {
+        "entity_id": "S1-216816542",
+        "country": "India",
+        "business_name": "Green Engineering",
+        "business_address": "525 Ward 6, At Asha Nagar, More Pops -Soh Sarai, Bihar, Nalanda, Bihar",
+        "name_norm": "green engineering",
+        "address_norm": "525 ward 6 at asha nagar more pops soh sarai bihar nalanda bihar",
+        "name_tokens": [
+          "green",
+          "engineering"
+        ],
+        "address_numeric_tokens": [
+          "525",
+          "6"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-909961405",
+        "country": "India",
+        "business_name": "Green Green Engineering",
+        "business_address": "25 WARD 6, AT ASHA NAGAR, MORE POPS -SOH SARAI, BIHAR, Bihar",
+        "name_norm": "green green engineering",
+        "address_norm": "25 ward 6 at asha nagar more pops soh sarai bihar bihar",
+        "name_tokens": [
+          "green",
+          "green",
+          "engineering"
+        ],
+        "address_numeric_tokens": [
+          "25",
+          "6"
+        ]
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [
+        "engineering",
+        "green"
+      ],
+      "shared_address_numbers": [
+        "6"
+      ]
+    },
+    {
+      "sample_hash": 177920275355481,
+      "s1": {
+        "entity_id": "S1-784938102",
+        "country": "US",
+        "business_name": "Nelson's Diamond Apparel L.L.C.",
+        "business_address": "2216 Harrod Street, Ashland, KY",
+        "name_norm": "nelson s diamond apparel l l c",
+        "address_norm": "2216 harrod street ashland ky",
+        "name_tokens": [
+          "nelson",
+          "s",
+          "diamond",
+          "apparel",
+          "l",
+          "l",
+          "c"
+        ],
+        "address_numeric_tokens": [
+          "2216"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-725060927",
+        "country": "US",
+        "business_name": "Nelson's Diamond Apparel Llc",
+        "business_address": "HARROD STREET, ASHLAND, NULL, KY",
+        "name_norm": "nelson s diamond apparel llc",
+        "address_norm": "harrod street ashland null ky",
+        "name_tokens": [
+          "nelson",
+          "s",
+          "diamond",
+          "apparel",
+          "llc"
+        ],
+        "address_numeric_tokens": []
+      },
+      "source": "S2",
+      "country": "US",
+      "shared_name_tokens": [
+        "apparel",
+        "diamond",
+        "nelson",
+        "s"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 199060830850430,
+      "s1": {
+        "entity_id": "S1-973056391",
+        "country": "US",
+        "business_name": "Randene Waiters End LLC",
+        "business_address": "1505 Walters Avenue, Dierks, AR",
+        "name_norm": "randene waiters end llc",
+        "address_norm": "1505 walters avenue dierks ar",
+        "name_tokens": [
+          "randene",
+          "waiters",
+          "end",
+          "llc"
+        ],
+        "address_numeric_tokens": [
+          "1505"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-471043429",
+        "country": "US",
+        "business_name": "Randene Waiters  End",
+        "business_address": "150 Walters Ave, Dierks, Arkansas",
+        "name_norm": "randene waiters end",
+        "address_norm": "150 walters ave dierks arkansas",
+        "name_tokens": [
+          "randene",
+          "waiters",
+          "end"
+        ],
+        "address_numeric_tokens": [
+          "150"
+        ]
+      },
+      "source": "S3",
+      "country": "US",
+      "shared_name_tokens": [
+        "end",
+        "randene",
+        "waiters"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 203839843829858,
+      "s1": {
+        "entity_id": "S1-286219191",
+        "country": "US",
+        "business_name": "Clean Freedom LLC",
+        "business_address": "7011 John Adams Way, Louisville, KY",
+        "name_norm": "clean freedom llc",
+        "address_norm": "7011 john adams way louisville ky",
+        "name_tokens": [
+          "clean",
+          "freedom",
+          "llc"
+        ],
+        "address_numeric_tokens": [
+          "7011"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-779258965",
+        "country": "US",
+        "business_name": "Clean Freedom",
+        "business_address": "John Adams Way, Louisville, Kentucky",
+        "name_norm": "clean freedom",
+        "address_norm": "john adams way louisville kentucky",
+        "name_tokens": [
+          "clean",
+          "freedom"
+        ],
+        "address_numeric_tokens": []
+      },
+      "source": "S3",
+      "country": "US",
+      "shared_name_tokens": [
+        "clean",
+        "freedom"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 232650800394275,
+      "s1": {
+        "entity_id": "S1-370403107",
+        "country": "US",
+        "business_name": "Newcomb Cleaning PLLC",
+        "business_address": "56 Nancy Drive, Cropwell, AL",
+        "name_norm": "newcomb cleaning pllc",
+        "address_norm": "56 nancy drive cropwell al",
+        "name_tokens": [
+          "newcomb",
+          "cleaning",
+          "pllc"
+        ],
+        "address_numeric_tokens": [
+          "56"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-413211188",
+        "country": "US",
+        "business_name": "Newcomb Cleaning",
+        "business_address": "#56 Nancy Drive, Alabama, Cropwell",
+        "name_norm": "newcomb cleaning",
+        "address_norm": "56 nancy drive alabama cropwell",
+        "name_tokens": [
+          "newcomb",
+          "cleaning"
+        ],
+        "address_numeric_tokens": [
+          "56"
+        ]
+      },
+      "source": "S3",
+      "country": "US",
+      "shared_name_tokens": [
+        "cleaning",
+        "newcomb"
+      ],
+      "shared_address_numbers": [
+        "56"
+      ]
+    },
+    {
+      "sample_hash": 285898103382582,
+      "s1": {
+        "entity_id": "S1-773777308",
+        "country": "India",
+        "business_name": "Engineering Point Foundation",
+        "business_address": "Patna, New Mainpura, Bihar, Pragati Nagar, Ward 14, Dinapur-Cum-Khagaul",
+        "name_norm": "engineering point foundation",
+        "address_norm": "patna new mainpura bihar pragati nagar ward 14 dinapur cum khagaul",
+        "name_tokens": [
+          "engineering",
+          "point",
+          "foundation"
+        ],
+        "address_numeric_tokens": [
+          "14"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-260189364",
+        "country": "India",
+        "business_name": "Engineering Point",
+        "business_address": "Patna, Dinapur-cum-khagaul, Hn 151 New Mainpura, Pragati Nagar, Ward 14, BR",
+        "name_norm": "engineering point",
+        "address_norm": "patna dinapur cum khagaul hn 151 new mainpura pragati nagar ward 14 br",
+        "name_tokens": [
+          "engineering",
+          "point"
+        ],
+        "address_numeric_tokens": [
+          "151",
+          "14"
+        ]
+      },
+      "source": "S3",
+      "country": "India",
+      "shared_name_tokens": [
+        "engineering",
+        "point"
+      ],
+      "shared_address_numbers": [
+        "14"
+      ]
+    },
+    {
+      "sample_hash": 299950236627914,
+      "s1": {
+        "entity_id": "S1-521515409",
+        "country": "India",
+        "business_name": "Shakti Agro Private Limited",
+        "business_address": "G T Roadsherpur Ludhiana, Punjab, Ludhiana",
+        "name_norm": "shakti agro private limited",
+        "address_norm": "g t roadsherpur ludhiana punjab ludhiana",
+        "name_tokens": [
+          "shakti",
+          "agro",
+          "private",
+          "limited"
+        ],
+        "address_numeric_tokens": []
+      },
+      "target": {
+        "entity_id": "S2-946804009",
+        "country": "India",
+        "business_name": "Limited Shakti Private Partners",
+        "business_address": "ਪੰਜਾਬ, LUDHIANA, G T ROADSHERPUR LUDHIANA, LUDHIANA",
+        "name_norm": "limited shakti private partners",
+        "address_norm": "ਪੰਜਾਬ ludhiana g t roadsherpur ludhiana ludhiana",
+        "name_tokens": [
+          "limited",
+          "shakti",
+          "private",
+          "partners"
+        ],
+        "address_numeric_tokens": []
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [
+        "limited",
+        "private",
+        "shakti"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 328832895084105,
+      "s1": {
+        "entity_id": "S1-718458221",
+        "country": "US",
+        "business_name": "Leonore C. Johnson, Esq. Care",
+        "business_address": "303 Birch Street, Sauk Centre, MN",
+        "name_norm": "leonore c johnson esq care",
+        "address_norm": "303 birch street sauk centre mn",
+        "name_tokens": [
+          "leonore",
+          "c",
+          "johnson",
+          "esq",
+          "care"
+        ],
+        "address_numeric_tokens": [
+          "303"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-660333848",
+        "country": "US",
+        "business_name": "LEONORE C. JOHNSON,",
+        "business_address": "319 BIRCH STREET, SAUK CENTRE, MN",
+        "name_norm": "leonore c johnson",
+        "address_norm": "319 birch street sauk centre mn",
+        "name_tokens": [
+          "leonore",
+          "c",
+          "johnson"
+        ],
+        "address_numeric_tokens": [
+          "319"
+        ]
+      },
+      "source": "S2",
+      "country": "US",
+      "shared_name_tokens": [
+        "c",
+        "johnson",
+        "leonore"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 336587667925749,
+      "s1": {
+        "entity_id": "S1-300438772",
+        "country": "US",
+        "business_name": "Patton, Blazek and Luna Group",
+        "business_address": "218 Scenic Hills, Parkersburg, WV",
+        "name_norm": "patton blazek and luna group",
+        "address_norm": "218 scenic hills parkersburg wv",
+        "name_tokens": [
+          "patton",
+          "blazek",
+          "and",
+          "luna",
+          "group"
+        ],
+        "address_numeric_tokens": [
+          "218"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-839087912",
+        "country": "US",
+        "business_name": "Patton, Blazek and Luna Inc",
+        "business_address": "Scenic Hills, Parkersburg, West Virginia",
+        "name_norm": "patton blazek and luna inc",
+        "address_norm": "scenic hills parkersburg west virginia",
+        "name_tokens": [
+          "patton",
+          "blazek",
+          "and",
+          "luna",
+          "inc"
+        ],
+        "address_numeric_tokens": []
+      },
+      "source": "S3",
+      "country": "US",
+      "shared_name_tokens": [
+        "and",
+        "blazek",
+        "luna",
+        "patton"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 370129959259968,
+      "s1": {
+        "entity_id": "S1-148187034",
+        "country": "US",
+        "business_name": "Gullion Elite Atlas Inc.",
+        "business_address": "2 Deon Way, Plattsburgh, NY",
+        "name_norm": "gullion elite atlas inc",
+        "address_norm": "2 deon way plattsburgh ny",
+        "name_tokens": [
+          "gullion",
+          "elite",
+          "atlas",
+          "inc"
+        ],
+        "address_numeric_tokens": [
+          "2"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-865553205",
+        "country": "US",
+        "business_name": "Gullion Élite Atlas Inc.",
+        "business_address": "2-6 DEON WAY, PLATTSBURGH, NY",
+        "name_norm": "gullion élite atlas inc",
+        "address_norm": "2 6 deon way plattsburgh ny",
+        "name_tokens": [
+          "gullion",
+          "élite",
+          "atlas",
+          "inc"
+        ],
+        "address_numeric_tokens": [
+          "2",
+          "6"
+        ]
+      },
+      "source": "S2",
+      "country": "US",
+      "shared_name_tokens": [
+        "atlas",
+        "gullion",
+        "inc"
+      ],
+      "shared_address_numbers": [
+        "2"
+      ]
+    },
+    {
+      "sample_hash": 386197678457909,
+      "s1": {
+        "entity_id": "S1-881367168",
+        "country": "India",
+        "business_name": "Silk Services Private Limited",
+        "business_address": "Pune, Maharashtra, Pune, 5/4 Nagar Road Pune.",
+        "name_norm": "silk services private limited",
+        "address_norm": "pune maharashtra pune 5 4 nagar road pune",
+        "name_tokens": [
+          "silk",
+          "services",
+          "private",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "5",
+          "4"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-134812572",
+        "country": "India",
+        "business_name": "SILK SERVICES  PRIVATE",
+        "business_address": "",
+        "name_norm": "silk services private",
+        "address_norm": "",
+        "name_tokens": [
+          "silk",
+          "services",
+          "private"
+        ],
+        "address_numeric_tokens": []
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [
+        "private",
+        "services",
+        "silk"
+      ],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 438764429693382,
+      "s1": {
+        "entity_id": "S1-502888861",
+        "country": "US",
+        "business_name": "Better Commercial Laboratories LLC",
+        "business_address": "42 Hunns Lake Road, Stanford, NY",
+        "name_norm": "better commercial laboratories llc",
+        "address_norm": "42 hunns lake road stanford ny",
+        "name_tokens": [
+          "better",
+          "commercial",
+          "laboratories",
+          "llc"
+        ],
+        "address_numeric_tokens": [
+          "42"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-604637307",
+        "country": "US",
+        "business_name": "BETTER COMMERCIAL",
+        "business_address": "42B HUNNS LAKE ROAD, STANFORD, NY",
+        "name_norm": "better commercial",
+        "address_norm": "42b hunns lake road stanford ny",
+        "name_tokens": [
+          "better",
+          "commercial"
+        ],
+        "address_numeric_tokens": [
+          "42"
+        ]
+      },
+      "source": "S2",
+      "country": "US",
+      "shared_name_tokens": [
+        "better",
+        "commercial"
+      ],
+      "shared_address_numbers": [
+        "42"
+      ]
+    },
+    {
+      "sample_hash": 525320091464776,
+      "s1": {
+        "entity_id": "S1-638569181",
+        "country": "India",
+        "business_name": "Chennai 16 Exporters Private Limited",
+        "business_address": "No.3, Muthaiyal Reddy Street, Alandur, Chennai 16, Tamil Nadu",
+        "name_norm": "chennai 16 exporters private limited",
+        "address_norm": "no 3 muthaiyal reddy street alandur chennai 16 tamil nadu",
+        "name_tokens": [
+          "chennai",
+          "16",
+          "exporters",
+          "private",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "3",
+          "16"
+        ]
+      },
+      "target": {
+        "entity_id": "S3-8528430",
+        "country": "India",
+        "business_name": "Chennai 16 Exporters Private Ltd",
+        "business_address": "Door No 3, Chennai 16, Alandur, தமிழ்நாடு",
+        "name_norm": "chennai 16 exporters private ltd",
+        "address_norm": "door no 3 chennai 16 alandur தமிழ்நாடு",
+        "name_tokens": [
+          "chennai",
+          "16",
+          "exporters",
+          "private",
+          "ltd"
+        ],
+        "address_numeric_tokens": [
+          "3",
+          "16"
+        ]
+      },
+      "source": "S3",
+      "country": "India",
+      "shared_name_tokens": [
+        "16",
+        "chennai",
+        "exporters",
+        "private"
+      ],
+      "shared_address_numbers": [
+        "16",
+        "3"
+      ]
+    },
+    {
+      "sample_hash": 531268859990785,
+      "s1": {
+        "entity_id": "S1-875801955",
+        "country": "US",
+        "business_name": "Downtown Ice Cream",
+        "business_address": "16621 33rd Avenue, Lynnwood, WA",
+        "name_norm": "downtown ice cream",
+        "address_norm": "16621 33rd avenue lynnwood wa",
+        "name_tokens": [
+          "downtown",
+          "ice",
+          "cream"
+        ],
+        "address_numeric_tokens": [
+          "16621",
+          "33"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-479334485",
+        "country": "US",
+        "business_name": "Downtown Ice",
+        "business_address": "33ND AVE, LYNNWOOD, WA",
+        "name_norm": "downtown ice",
+        "address_norm": "33nd ave lynnwood wa",
+        "name_tokens": [
+          "downtown",
+          "ice"
+        ],
+        "address_numeric_tokens": [
+          "33"
+        ]
+      },
+      "source": "S2",
+      "country": "US",
+      "shared_name_tokens": [
+        "downtown",
+        "ice"
+      ],
+      "shared_address_numbers": [
+        "33"
+      ]
+    },
+    {
+      "sample_hash": 537537734360394,
+      "s1": {
+        "entity_id": "S1-632370376",
+        "country": "India",
+        "business_name": "Jaipur Stocks Pvt Ltd",
+        "business_address": "Fl No-401, 3Rd Floor, Vaishali Elegance, Jaipur, Rajasthan",
+        "name_norm": "jaipur stocks pvt ltd",
+        "address_norm": "fl no 401 3rd floor vaishali elegance jaipur rajasthan",
+        "name_tokens": [
+          "jaipur",
+          "stocks",
+          "pvt",
+          "ltd"
+        ],
+        "address_numeric_tokens": [
+          "401",
+          "3"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-913851699",
+        "country": "India",
+        "business_name": "Jaipur Stocks Pvt Limited",
+        "business_address": "FL NO-40, 3RD FLOOR, VAISHALI ELEGANCE, JAIPUR, Rajasthan",
+        "name_norm": "jaipur stocks pvt limited",
+        "address_norm": "fl no 40 3rd floor vaishali elegance jaipur rajasthan",
+        "name_tokens": [
+          "jaipur",
+          "stocks",
+          "pvt",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "40",
+          "3"
+        ]
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [
+        "jaipur",
+        "pvt",
+        "stocks"
+      ],
+      "shared_address_numbers": [
+        "3"
+      ]
+    },
+    {
+      "sample_hash": 571589121109735,
+      "s1": {
+        "entity_id": "S1-905781662",
+        "country": "India",
+        "business_name": "Eastern Construction",
+        "business_address": "C/O Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, Uttar Pradesh",
+        "name_norm": "eastern construction",
+        "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur uttar pradesh",
+        "name_tokens": [
+          "eastern",
+          "construction"
+        ],
+        "address_numeric_tokens": []
+      },
+      "target": {
+        "entity_id": "S3-86984213",
+        "country": "India",
+        "business_name": "ईस्टर्न कंस्ट्रक्शन",
+        "business_address": "C/o Prakash Narayan Shukla Jahanpur (Near Osho School Bindki), Fatehpur, उत्तर प्रदेश",
+        "name_norm": "ईस्टर्न कंस्ट्रक्शन",
+        "address_norm": "c o prakash narayan shukla jahanpur near osho school bindki fatehpur उत्तर प्रदेश",
+        "name_tokens": [
+          "ईस्टर्न",
+          "कंस्ट्रक्शन"
+        ],
+        "address_numeric_tokens": []
+      },
+      "source": "S3",
+      "country": "India",
+      "shared_name_tokens": [],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 579342180304758,
+      "s1": {
+        "entity_id": "S1-370645971",
+        "country": "India",
+        "business_name": "Bombay Foundation LLP",
+        "business_address": "C/O Moradabad Road-Opp.Ekta Vihar Sambhal, Moradabad, Sambhal, Uttar Pradesh",
+        "name_norm": "bombay foundation llp",
+        "address_norm": "c o moradabad road opp ekta vihar sambhal moradabad sambhal uttar pradesh",
+        "name_tokens": [
+          "bombay",
+          "foundation",
+          "llp"
+        ],
+        "address_numeric_tokens": []
+      },
+      "target": {
+        "entity_id": "S3-577357887",
+        "country": "India",
+        "business_name": "बॉम्बे फाउंडेशन एलएलपी",
+        "business_address": "Moradabad, Sambhal, उत्तर प्रदेश, C/o Moradabad Road-opp.ekta Vihar Sambhal",
+        "name_norm": "बॉम्बे फाउंडेशन एलएलपी",
+        "address_norm": "moradabad sambhal उत्तर प्रदेश c o moradabad road opp ekta vihar sambhal",
+        "name_tokens": [
+          "बॉम्बे",
+          "फाउंडेशन",
+          "एलएलपी"
+        ],
+        "address_numeric_tokens": []
+      },
+      "source": "S3",
+      "country": "India",
+      "shared_name_tokens": [],
+      "shared_address_numbers": []
+    },
+    {
+      "sample_hash": 636610241156530,
+      "s1": {
+        "entity_id": "S1-106678782",
+        "country": "India",
+        "business_name": "Vis College Pvt. Ltd.",
+        "business_address": "Shop No.2, Jayant Krupa Sector-9, Dive Village, Navi Mumbai, Maharashtra",
+        "name_norm": "vis college pvt ltd",
+        "address_norm": "shop no 2 jayant krupa sector 9 dive village navi mumbai maharashtra",
+        "name_tokens": [
+          "vis",
+          "college",
+          "pvt",
+          "ltd"
+        ],
+        "address_numeric_tokens": [
+          "2",
+          "9"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-106319943",
+        "country": "India",
+        "business_name": "Mr EVOEVOJAX",
+        "business_address": "NAVI MUMBAI, महाराष्ट्र, NAVI MUMBAI, SHOP NO.2, JAYANT KRUPA SECTOR-9, DIVE VILLAGE",
+        "name_norm": "mr evoevojax",
+        "address_norm": "navi mumbai महाराष्ट्र navi mumbai shop no 2 jayant krupa sector 9 dive village",
+        "name_tokens": [
+          "mr",
+          "evoevojax"
+        ],
+        "address_numeric_tokens": [
+          "2",
+          "9"
+        ]
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [],
+      "shared_address_numbers": [
+        "2",
+        "9"
+      ]
+    },
+    {
+      "sample_hash": 641281083950633,
+      "s1": {
+        "entity_id": "S1-48680569",
+        "country": "India",
+        "business_name": "Star Classic Ventures Private Limited",
+        "business_address": "120-25/164 Taj Mahal Colony, Peerzadiguda, Hyderabade, Hyderabad, Telangana",
+        "name_norm": "star classic ventures private limited",
+        "address_norm": "120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad telangana",
+        "name_tokens": [
+          "star",
+          "classic",
+          "ventures",
+          "private",
+          "limited"
+        ],
+        "address_numeric_tokens": [
+          "120",
+          "25",
+          "164"
+        ]
+      },
+      "target": {
+        "entity_id": "S2-197425554",
+        "country": "India",
+        "business_name": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+        "business_address": "G-120-25/164 TAJ MAHAL COLONY, PEERZADIGUDA, HYDERABADE, HYDERABAD, Andhra Pradesh",
+        "name_norm": "స్టార్ క్లాసిక్ వెంచర్స్ ప్రైవేట్ లిమిటెడ్",
+        "address_norm": "g 120 25 164 taj mahal colony peerzadiguda hyderabade hyderabad andhra pradesh",
+        "name_tokens": [
+          "స్టార్",
+          "క్లాసిక్",
+          "వెంచర్స్",
+          "ప్రైవేట్",
+          "లిమిటెడ్"
+        ],
+        "address_numeric_tokens": [
+          "120",
+          "25",
+          "164"
+        ]
+      },
+      "source": "S2",
+      "country": "India",
+      "shared_name_tokens": [],
+      "shared_address_numbers": [
+        "120",
+        "164",
+        "25"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,291 @@
+{
+  "seed": 2061,
+  "sample_size": 50000,
+  "validation_size": 440522,
+  "sample_file": "splits\\stage6a_validation_subset.tsv",
+  "strata": "S1 country x exact number of true matches; largest-remainder proportional allocation and seeded random sampling",
+  "balance": {
+    "country": {
+      "India": {
+        "validation": 175886,
+        "sample": 19963,
+        "validation_fraction": 0.39926723296452843,
+        "sample_fraction": 0.39926
+      },
+      "US": {
+        "validation": 264636,
+        "sample": 30037,
+        "validation_fraction": 0.6007327670354715,
+        "sample_fraction": 0.60074
+      }
+    },
+    "match_count": {
+      "0": {
+        "validation": 24597,
+        "sample": 2792,
+        "validation_fraction": 0.055836030890625214,
+        "sample_fraction": 0.05584
+      },
+      "1": {
+        "validation": 23704,
+        "sample": 2690,
+        "validation_fraction": 0.05380889036188885,
+        "sample_fraction": 0.0538
+      },
+      "2": {
+        "validation": 74716,
+        "sample": 8481,
+        "validation_fraction": 0.16960787429458687,
+        "sample_fraction": 0.16962
+      },
+      "3": {
+        "validation": 106096,
+        "sample": 12042,
+        "validation_fraction": 0.24084154707369893,
+        "sample_fraction": 0.24084
+      },
+      "4": {
+        "validation": 96522,
+        "sample": 10956,
+        "validation_fraction": 0.21910823977009095,
+        "sample_fraction": 0.21912
+      },
+      "5": {
+        "validation": 64221,
+        "sample": 7289,
+        "validation_fraction": 0.14578386550501451,
+        "sample_fraction": 0.14578
+      },
+      "6": {
+        "validation": 33178,
+        "sample": 3765,
+        "validation_fraction": 0.07531519424682535,
+        "sample_fraction": 0.0753
+      },
+      "7": {
+        "validation": 12840,
+        "sample": 1457,
+        "validation_fraction": 0.0291472389574187,
+        "sample_fraction": 0.02914
+      },
+      "8": {
+        "validation": 3698,
+        "sample": 420,
+        "validation_fraction": 0.008394586422471522,
+        "sample_fraction": 0.0084
+      },
+      "9": {
+        "validation": 842,
+        "sample": 96,
+        "validation_fraction": 0.0019113687852139053,
+        "sample_fraction": 0.00192
+      },
+      "10": {
+        "validation": 104,
+        "sample": 12,
+        "validation_fraction": 0.0002360835554183446,
+        "sample_fraction": 0.00024
+      },
+      "11": {
+        "validation": 4,
+        "sample": 0,
+        "validation_fraction": 9.080136746859407e-06,
+        "sample_fraction": 0.0
+      }
+    },
+    "singleton": {
+      "False": {
+        "validation": 415925,
+        "sample": 47208,
+        "validation_fraction": 0.9441639691093748,
+        "sample_fraction": 0.94416
+      },
+      "True": {
+        "validation": 24597,
+        "sample": 2792,
+        "validation_fraction": 0.055836030890625214,
+        "sample_fraction": 0.05584
+      }
+    }
+  },
+  "target_counts": {
+    "S2": 5034616,
+    "S3": 5285603
+  },
+  "tfidf": {
+    "field": "address_norm",
+    "analyzer": "char_wb",
+    "ngram_range": [
+      4,
+      5
+    ],
+    "min_df": 2,
+    "max_df": 0.02,
+    "score_floor": 0.05,
+    "batch_size": 50000,
+    "vocabulary_size": 90252,
+    "query_nonzeros": 1841267,
+    "fit_seconds": 1.2054169999992155,
+    "scan_seconds": 980.1072324999986,
+    "vectorization_seconds": 576.9158084999908,
+    "sparse_product_seconds": 181.14096819999395
+  },
+  "metrics": {
+    "stage4": {
+      "true_hits": 105057,
+      "true_links": 173180,
+      "true_recall": 0.6066347153250953,
+      "source_recall": {
+        "S2": {
+          "hits": 50000,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 55057,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 30553,
+          "total": 69246
+        },
+        "US": {
+          "hits": 74504,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 1216802,
+        "mean": 24.33604,
+        "median": 6,
+        "p90": 73,
+        "p95": 120,
+        "p99": 238,
+        "max": 671,
+        "zero_entities": 3992
+      }
+    },
+    "stage5": {
+      "true_hits": 133455,
+      "true_links": 173180,
+      "true_recall": 0.7706143896523848,
+      "source_recall": {
+        "S2": {
+          "hits": 64232,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 69223,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 44518,
+          "total": 69246
+        },
+        "US": {
+          "hits": 88937,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 2049173,
+        "mean": 40.98346,
+        "median": 22,
+        "p90": 86,
+        "p95": 133,
+        "p99": 252,
+        "max": 684,
+        "zero_entities": 0
+      }
+    },
+    "stage5_address_k5": {
+      "true_hits": 161584,
+      "true_links": 173180,
+      "true_recall": 0.9330407668321977,
+      "source_recall": {
+        "S2": {
+          "hits": 78567,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 83017,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 62061,
+          "total": 69246
+        },
+        "US": {
+          "hits": 99523,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 2424163,
+        "mean": 48.48326,
+        "median": 30,
+        "p90": 94,
+        "p95": 141,
+        "p99": 260,
+        "max": 691,
+        "zero_entities": 0
+      }
+    },
+    "stage5_address_k10": {
+      "true_hits": 163478,
+      "true_links": 173180,
+      "true_recall": 0.9439773645917543,
+      "source_recall": {
+        "S2": {
+          "hits": 79424,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 84054,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 63054,
+          "total": 69246
+        },
+        "US": {
+          "hits": 100424,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 2914495,
+        "mean": 58.2899,
+        "median": 40,
+        "p90": 103,
+        "p95": 151,
+        "p99": 269,
+        "max": 701,
+        "zero_entities": 0
+      }
+    }
+  },
+  "incremental_over_stage5": {
+    "5": {
+      "additional_candidates": 374990,
+      "additional_true_links": 28129,
+      "true_links_per_1000_additional_candidates": 75.01266700445345,
+      "additional_candidates_per_true_link": 13.331081801699314
+    },
+    "10": {
+      "additional_candidates": 865322,
+      "additional_true_links": 30023,
+      "true_links_per_1000_additional_candidates": 34.69575487506385,
+      "additional_candidates_per_true_link": 28.821969823135596
+    }
+  },
+  "total_seconds": 1028.9707285000004,
+  "approx_peak_rss_bytes": 666218496
+}

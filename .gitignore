@@ -1,0 +1,22 @@
+# Raw competition data and generated outputs
+/dataset/
+/artifacts/
+/matching_results.tsv
+/candidate_pairs.tsv
+
+# Local Python environments and caches
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local configuration and operating-system files
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db

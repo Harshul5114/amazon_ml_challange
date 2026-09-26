@@ -1,0 +1,8 @@
+{
+  "seed": 2026,
+  "algorithm": "SHA-256 of UTF-8 text '<seed>:<source1_entity_id>'; first 8 digest bytes as unsigned big-endian integer",
+  "validation_rule": "hash_integer < 3689348814741910323",
+  "membership_file": "s1_train_validation.tsv",
+  "train_count": 1766299,
+  "validation_count": 440522
+}
