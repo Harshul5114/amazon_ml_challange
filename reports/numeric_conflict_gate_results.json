@@ -1,0 +1,110 @@
+{
+  "experiment_id": "numeric_conflict_gate_v1",
+  "fixed_validation_subset_s1": 50000,
+  "candidate_pairs": 2424163,
+  "candidate_true_hits": 161584,
+  "candidate_true_links": 173180,
+  "candidate_recall": 0.9330407668321977,
+  "model": "hist_gb; 5,000 sampled training S1; 50 candidates per S1/source; 150,000 augmented negatives",
+  "threshold": 0.97,
+  "gate": "reject candidate if numeric_conflict feature is 1",
+  "baseline": {
+    "macro_f05": 0.6578875080801553,
+    "pair_precision": 0.8184328615809459,
+    "pair_recall": 0.41072872156138124,
+    "true_positives": 71130,
+    "false_positives": 15780,
+    "false_negatives": 102050,
+    "singleton_accuracy": 0.1930515759312321,
+    "singleton_false_match_entities": 2253,
+    "singleton_false_match_links": 3106,
+    "non_singleton_macro_f05": 0.6853790756653058,
+    "non_singleton_macro_precision": 0.8308655312658871,
+    "non_singleton_macro_recall": 0.4592855360807826,
+    "average_predicted_matches_per_s1": 1.7382
+  },
+  "gated": {
+    "macro_f05": 0.6945884394118952,
+    "pair_precision": 0.8866549859453191,
+    "pair_recall": 0.40617276821803905,
+    "true_positives": 70341,
+    "false_positives": 8992,
+    "false_negatives": 102839,
+    "singleton_accuracy": 0.5218481375358166,
+    "singleton_false_match_entities": 1335,
+    "singleton_false_match_links": 1633,
+    "non_singleton_macro_f05": 0.7048047358624547,
+    "non_singleton_macro_precision": 0.8721403152008135,
+    "non_singleton_macro_recall": 0.4554494395623018,
+    "average_predicted_matches_per_s1": 1.58666
+  },
+  "country_results": {
+    "India": {
+      "s1_count": 19963,
+      "baseline": {
+        "macro_f05": 0.626328672168439,
+        "pair_precision": 0.8071465944415377,
+        "pair_recall": 0.3787222366634896,
+        "true_positives": 26225,
+        "false_positives": 6266,
+        "false_negatives": 43021,
+        "singleton_accuracy": 0.3000898472596586,
+        "singleton_false_match_entities": 779,
+        "singleton_false_match_links": 1053,
+        "non_singleton_macro_f05": 0.645591473872602,
+        "non_singleton_macro_precision": 0.7985941644562334,
+        "non_singleton_macro_recall": 0.4184456654456654,
+        "average_predicted_matches_per_s1": 1.6275609878274808
+      },
+      "gated": {
+        "macro_f05": 0.6403180551804034,
+        "pair_precision": 0.8375906552852833,
+        "pair_recall": 0.3769315195101522,
+        "true_positives": 26101,
+        "false_positives": 5061,
+        "false_negatives": 43145,
+        "singleton_accuracy": 0.431266846361186,
+        "singleton_false_match_entities": 633,
+        "singleton_false_match_links": 812,
+        "non_singleton_macro_f05": 0.6526615032130714,
+        "non_singleton_macro_precision": 0.8143236074270557,
+        "non_singleton_macro_recall": 0.4168966569828639,
+        "average_predicted_matches_per_s1": 1.5609878274808395
+      }
+    },
+    "US": {
+      "s1_count": 30037,
+      "baseline": {
+        "macro_f05": 0.6788619409897529,
+        "pair_precision": 0.8251713555927158,
+        "pair_recall": 0.432053033655974,
+        "true_positives": 44905,
+        "false_positives": 9514,
+        "false_negatives": 59029,
+        "singleton_accuracy": 0.12209648600357356,
+        "singleton_false_match_entities": 1474,
+        "singleton_false_match_links": 2053,
+        "non_singleton_macro_f05": 0.7118265082695961,
+        "non_singleton_macro_precision": 0.8523168065448903,
+        "non_singleton_macro_recall": 0.4864324280150502,
+        "average_predicted_matches_per_s1": 1.8117321969570863
+      },
+      "gated": {
+        "macro_f05": 0.7306572771924084,
+        "pair_precision": 0.9183948848892487,
+        "pair_recall": 0.4256547424326977,
+        "true_positives": 44240,
+        "false_positives": 3931,
+        "false_negatives": 59694,
+        "singleton_accuracy": 0.5818939845145921,
+        "singleton_false_match_entities": 702,
+        "singleton_false_match_links": 821,
+        "non_singleton_macro_f05": 0.7394651468731352,
+        "non_singleton_macro_precision": 0.9105719726355879,
+        "non_singleton_macro_recall": 0.4810760687894125,
+        "average_predicted_matches_per_s1": 1.6037220761061357
+      }
+    }
+  },
+  "runtime_seconds": 24.543444800001453
+}

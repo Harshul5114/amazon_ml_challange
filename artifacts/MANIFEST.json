@@ -1,0 +1,14 @@
+{
+  "hash_algorithm": "SHA-256",
+  "files": [
+    {"name": "address_tfidf_subset_top10.npz", "bytes": 6824218, "sha256": "9058993aa00b69fefb9ba4a899ad2f565a22029cfb33c0cc0f7ee2a214b587df"},
+    {"name": "singleton_subset_scored.npz", "bytes": 34991285, "sha256": "5d382b2c9d1cfe5a3309b8221776f9394ab97fe3f329bacad8f70504a2b30e77"},
+    {"name": "stage4_pairs_packed.npy", "bytes": 85661480, "sha256": "7dfc21948df6efbdad42e47f1bce82895876f385331e456f8121e995e6cf84e2"},
+    {"name": "tfidf_run_metadata.json", "bytes": 752, "sha256": "744e7e3398c3367d7e82229a05b7869f0d5a535d9ede46bb477caccc57eb54c2"},
+    {"name": "tfidf_top20.npz", "bytes": 97390018, "sha256": "f2187a71ef762691f04f8690b27076fef9dc077f6fdb5c1ed4ee28d5c709f2ef"},
+    {"name": "train_features.npz", "bytes": 3545262, "sha256": "f94ab0825b06c8fa2ab1a68a9772a202a430287e5df50ef5377600ce684be996"},
+    {"name": "translit_broad_gate_results.json", "bytes": 15914, "sha256": "bfd2fbd7ec597230b5483811796b91ae9c9d6ef2ec2c6b1a728d596d6205df55"},
+    {"name": "translit_top10_subset.npz", "bytes": 1320521, "sha256": "8f6ff9b7678c7664d79f71572edc769b8ecafb6608e8a036350699d679f05fb6"},
+    {"name": "tree_match_model.joblib", "bytes": 299144, "sha256": "b891c63c246ed7f2038505da419153cb4061ae14a5f5a027fc9b719cda4b2218"}
+  ]
+}

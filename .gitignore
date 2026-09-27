@@ -1,6 +1,17 @@
 # Raw competition data and generated outputs
 /dataset/
-/artifacts/
+/artifacts/*
+!/artifacts/README.md
+!/artifacts/MANIFEST.json
+!/artifacts/address_tfidf_subset_top10.npz
+!/artifacts/singleton_subset_scored.npz
+!/artifacts/stage4_pairs_packed.npy
+!/artifacts/tfidf_run_metadata.json
+!/artifacts/tfidf_top20.npz
+!/artifacts/train_features.npz
+!/artifacts/translit_broad_gate_results.json
+!/artifacts/translit_top10_subset.npz
+!/artifacts/tree_match_model.joblib
 /matching_results.tsv
 /candidate_pairs.tsv
 

@@ -1,0 +1,29 @@
+{
+  "s1_count": 440522,
+  "target_counts": {
+    "S2": 5034616,
+    "S3": 5285603
+  },
+  "top_k_per_source": 20,
+  "ngram_analyzer": "char_wb",
+  "ngram_range": [
+    4,
+    5
+  ],
+  "min_df": 2,
+  "max_df": 0.02,
+  "sublinear_tf": true,
+  "score_floor": 0.05,
+  "country_partition": "same country; missing country searches all / is searched by all",
+  "batch_size": 100000,
+  "n_threads": 4,
+  "vocabulary_size": 128109,
+  "query_nonzeros": 10345536,
+  "fit_seconds": 23.879891499999758,
+  "vectorization_seconds": 550.4806243999974,
+  "sparse_product_seconds": 1496.075650699995,
+  "total_seconds": 2442.4458299,
+  "approx_peak_rss_bytes": 1139494912,
+  "sklearn_version": "1.9.1",
+  "sparse_dot_topn_version": "1.2.0"
+}

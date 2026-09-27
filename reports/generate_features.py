@@ -3,9 +3,8 @@
 from __future__ import annotations
 
 import csv
-import json
+import heapq
 import time
-from array import array
 from collections import defaultdict
 from pathlib import Path
 
@@ -34,9 +33,10 @@ SEED = 2026
 
 
 def build_training_pairs(
-    sample_size: int = DEFAULT_TRAIN_SAMPLE, seed: int = SEED
+    sample_size: int = DEFAULT_TRAIN_SAMPLE, seed: int = SEED,
+    max_candidates_per_s1_source: int = 50,
 ) -> tuple[np.ndarray, np.ndarray, list[str]]:
-    """Build training pairs (X, y) with positive true links and hard negative candidate pairs."""
+    """Build training pairs with bounded, deterministic candidate sampling."""
     start = time.perf_counter()
     ARTIFACTS.mkdir(exist_ok=True)
 
@@ -56,7 +56,6 @@ def build_training_pairs(
 
     # Load ground truth for these S1
     truth_pairs: set[tuple[int, str, int]] = set()  # (s1_idx, source_prefix, target_number)
-    all_truth_target_ids: set[str] = set()
     with TRUTH_PATH.open("r", encoding="utf-8-sig", newline="") as handle:
         for row in csv.DictReader(handle, delimiter="\t"):
             s1_idx = s1_index.get(row["source1_entity_id"])
@@ -65,7 +64,6 @@ def build_training_pairs(
             for match in parse_match_ids(row["matched_entity_ids"]):
                 prefix, num = match.split("-", 1)
                 truth_pairs.add((s1_idx, prefix, int(num)))
-                all_truth_target_ids.add(match)
 
     print(f"Identified {len(truth_pairs):,} true match pairs for sampled S1 entities", flush=True)
 
@@ -77,9 +75,14 @@ def build_training_pairs(
             if len(num) >= 3 and len(addr_num_to_s1[(s1.country, num)]) < 5:
                 addr_num_to_s1[(s1.country, num)].append(idx)
 
-    candidate_pairs: set[tuple[int, str, int]] = set()
-    target_cache: dict[str, Business] = {}
-    random_targets: dict[str, list[tuple[int, Business]]] = {"S2": [], "S3": []}
+    if max_candidates_per_s1_source < 1:
+        raise ValueError("max_candidates_per_s1_source must be positive")
+    # Keep the lowest deterministic priorities per S1/source. This bounds memory
+    # even when a common address number produces millions of blocking pairs.
+    candidate_heaps: list[list[tuple[int, int]]] = [
+        [] for _ in range(2 * len(s1_records))
+    ]
+    random_target_ids: dict[str, list[int]] = {"S2": [], "S3": []}
 
     for source_code, path in enumerate(TARGETS):
         prefix = "S2" if source_code == 0 else "S3"
@@ -98,8 +101,6 @@ def build_training_pairs(
                 if len(parts) < min_cols:
                     continue
                 tid = parts[id_idx]
-                is_truth = tid in all_truth_target_ids
-
                 # Parse business
                 target = Business.from_raw({
                     "entity_id": tid,
@@ -118,27 +119,37 @@ def build_training_pairs(
                         for s1_idx in addr_num_to_s1.get((target.country, num), ()):
                             union.add(s1_idx)
 
-                if union or is_truth:
-                    target_cache[tid] = target
-
                 for idx in union:
-                    candidate_pairs.add((idx, prefix, numeric))
+                    priority = ((numeric * 0x9E3779B1) ^ (idx * 0x85EBCA77) ^
+                                (source_code * 0xC2B2AE3D)) & 0xFFFFFFFF
+                    heap = candidate_heaps[2 * idx + source_code]
+                    entry = (-priority, numeric)
+                    if len(heap) < max_candidates_per_s1_source:
+                        heapq.heappush(heap, entry)
+                    elif entry > heap[0]:
+                        heapq.heapreplace(heap, entry)
 
-                if len(random_targets[prefix]) < 40_000:
-                    random_targets[prefix].append((numeric, target))
+                if len(random_target_ids[prefix]) < 40_000:
+                    random_target_ids[prefix].append(numeric)
 
         print(f"Finished {path.name} in {time.perf_counter() - scan_start:.1f}s", flush=True)
 
     # Add random background negatives
     print("Adding background negative pairs...", flush=True)
+    candidate_pairs = {
+        (idx, "S2" if source_code == 0 else "S3", numeric)
+        for idx in range(len(s1_records))
+        for source_code in (0, 1)
+        for _, numeric in candidate_heaps[2 * idx + source_code]
+    }
+    del candidate_heaps
     for s1_idx in range(len(s1_records)):
         for prefix in ("S2", "S3"):
-            sample_pool = random_targets[prefix]
+            sample_pool = random_target_ids[prefix]
             if sample_pool:
                 for _ in range(2):
-                    r_num, r_target = sample_pool[rng.integers(len(sample_pool))]
+                    r_num = sample_pool[rng.integers(len(sample_pool))]
                     candidate_pairs.add((s1_idx, prefix, r_num))
-                    target_cache[f"{prefix}-{r_num}"] = r_target
 
     print(f"Generated {len(candidate_pairs):,} total candidate pairs (name, address, background)", flush=True)
 
@@ -146,12 +157,24 @@ def build_training_pairs(
     all_pairs = candidate_pairs | truth_pairs
     print(f"Total training pairs to featurize: {len(all_pairs):,}", flush=True)
 
+    needed_targets = {f"{prefix}-{numeric}" for _, prefix, numeric in all_pairs}
+    target_cache: dict[str, Business] = {}
+    for path in TARGETS:
+        with path.open("r", encoding="utf-8-sig", newline="") as handle:
+            for row in csv.DictReader(handle, delimiter="\t"):
+                tid = row["entity_id"]
+                if tid in needed_targets:
+                    target_cache[tid] = Business.from_raw(row)
+        print(f"Cached {len(target_cache):,}/{len(needed_targets):,} target records", flush=True)
+    if len(target_cache) != len(needed_targets):
+        raise ValueError("Some selected training target IDs were not found")
+
     # Compute features and labels
     feature_rows = []
     labels = []
     feat_start = time.perf_counter()
 
-    for s1_idx, prefix, numeric in all_pairs:
+    for s1_idx, prefix, numeric in sorted(all_pairs):
         tid = f"{prefix}-{numeric}"
         target = target_cache.get(tid)
         if target is None:

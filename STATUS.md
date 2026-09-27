@@ -104,7 +104,7 @@
 ## Stage 10 — Tree-Based Match Model: complete
 
 - `src/train_match_model.py` implements a histogram-based gradient-boosted decision tree matcher (`HistGradientBoostingClassifier`, conforming to user constraint "go for any tree based model rather than linear regression") optimized for entity-level macro F0.5.
-- Model architecture: `HistGradientBoostingClassifier(max_iter=150, learning_rate=0.08, max_leaf_nodes=31, min_samples_leaf=20, early_stopping=True, validation_fraction=0.1)`. Sample weighting applies square-root inverse frequency weighting to balance true links against large candidate volumes.
+- Model architecture: `HistGradientBoostingClassifier(max_iter=150, learning_rate=0.08, max_leaf_nodes=31, min_samples_leaf=20, early_stopping=True, validation_fraction=0.1)`. The current code does **not** apply sample weighting; the previous status claim about square-root inverse-frequency weights was incorrect.
 - Training performance: fitted on **1,195,766** pairwise candidate vectors with 15 features in **9.8 s** utilizing all CPU cores. Training ROC-AUC: **0.9995**. Serialized to `artifacts/tree_match_model.joblib`.
 - Validation evaluation: evaluated on the stratified **50,000** validation subset against all **2,423,980** multi-channel candidate pairs generated from Stage 8 (Stage 4 baseline + Name TF-IDF K=10 + Address TF-IDF K=5). Scored all pairs in **47.1 s**.
 - Threshold search: fine-grained sweep across high confidence thresholds [0.85, 0.9995] with top-1 prediction per target source (S2 and S3) to strictly control precision for the F0.5 metric.
@@ -115,6 +115,16 @@
   - **Average predicted matches per S1: 1.936**
 - Full metrics and threshold curve across all examined thresholds are recorded in `reports/model_evaluation_results.json`.
 - Unit tests: `tests/test_train_match_model.py` passes all training, probability calibration, and thresholding assertions (39 total unit tests passing in repository).
+
+## Stage 11 — Singleton false-positive audit and numeric conflict gate: complete
+
+- The original Stage 10 model and feature artifacts were absent locally. A fresh model was trained from 5,000 fixed-seed development S1 entities using a deterministic cap of 50 retrieved candidates per S1/source plus the existing 150,000 augmented negatives. This is a **new model**, so its score must not be read as a direct reproduction of the Stage 10 score.
+- The original feature generator produced 5,183,834 candidates from only 2,000 S1 and pushed free system memory below 1 GiB during a 20,000-S1 run. `reports/generate_features.py` now bounds retrieved training candidates and caches only selected target records. The completed 5,000-S1 run produced 535,520 training pairs after augmentation, including 17,244 positives.
+- On the fixed 50,000-S1 subset, the cached Stage 4 + name K=10 + address K=5 union contains 2,424,163 pairs and 161,584 / 173,180 true links (**93.304% candidate recall**), exactly matching the earlier Stage 6A subset result. The 5,000 training S1 IDs and 50,000 validation IDs have zero overlap.
+- At threshold 0.97 with top one per target source, the fresh model scores **0.657888 macro F0.5**, **81.843% pair precision**, **41.073% pair recall**, and **19.305% singleton accuracy**. There are 3,106 false links on 2,253 of 2,792 true singleton entities; 1,710 of those links have conflicting significant address numbers.
+- A single tested rule rejecting candidates with `numeric_conflict = 1` improves macro F0.5 to **0.694588**, pair precision to **88.665%**, and singleton accuracy to **52.185%**. Pair recall falls to **40.617%**; 789 true links are lost, while 6,788 false links are removed. Non-singleton macro F0.5 rises from 0.685379 to 0.704805.
+- `reports/singleton_false_positive_audit.json` contains sampled error cases; `reports/numeric_conflict_gate_results.json` contains exact metrics. The gate remains experimental and is not yet applied to the production prediction path. Tests now save toy models to temporary files instead of overwriting `artifacts/tree_match_model.joblib`.
+- Warning: the large improvement over the earlier reported Stage 10 score primarily reflects a different bounded training sample and model. The numeric gate's within-model gain is the valid comparison. Next: verify the bounded model and gate on the full fixed validation set after generating its address candidate cache, then inspect the remaining singleton false positives and false negatives before adoption.
 
 
 

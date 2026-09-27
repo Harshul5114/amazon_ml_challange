@@ -39,7 +39,8 @@ ADDRESS_TOP_PATH = ARTIFACTS / "address_tfidf_top10.npz"
 
 
 def train_tree_model(
-    X_train: np.ndarray, y_train: np.ndarray, model_type: str = "hist_gb"
+    X_train: np.ndarray, y_train: np.ndarray, model_type: str = "hist_gb",
+    model_path: Path | None = None,
 ) -> HistGradientBoostingClassifier | RandomForestClassifier:
     """Train a gradient-boosted decision tree matching model."""
     print(f"Training {model_type} model on {X_train.shape[0]:,} pairs with {X_train.shape[1]} features...", flush=True)
@@ -78,8 +79,9 @@ def train_tree_model(
     auc = roc_auc_score(y_train, train_probs)
     print(f"Train ROC-AUC: {auc:.4f}", flush=True)
 
-    joblib.dump(model, MODEL_PATH)
-    print(f"Saved model to {MODEL_PATH.name}", flush=True)
+    output_path = MODEL_PATH if model_path is None else model_path
+    joblib.dump(model, output_path)
+    print(f"Saved model to {output_path.name}", flush=True)
     return model
 
 

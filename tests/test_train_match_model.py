@@ -1,4 +1,6 @@
 import unittest
+from pathlib import Path
+from tempfile import TemporaryDirectory
 import numpy as np
 
 from src.blocking import Business
@@ -25,7 +27,8 @@ class TrainMatchModelTest(unittest.TestCase):
         # target is 1 if feature 0 (exact_name) or feature 1 (jaccard) > 0.5
         y = ((X[:, 0] > 0.5) | (X[:, 1] > 0.6)).astype(np.float32)
 
-        model = train_tree_model(X, y, model_type="hist_gb")
+        with TemporaryDirectory() as directory:
+            model = train_tree_model(X, y, model_type="hist_gb", model_path=Path(directory) / "toy_model.joblib")
         self.assertIsNotNone(model)
         probs = model.predict_proba(X[:5])[:, 1]
         self.assertEqual(len(probs), 5)
@@ -77,7 +80,8 @@ class TrainMatchModelTest(unittest.TestCase):
         # Duplicate to have enough samples for hist_gb
         X_train = np.repeat(np.asarray(X_rows, dtype=np.float32), 40, axis=0)
         y_train = np.repeat(np.asarray(y_rows, dtype=np.float32), 40, axis=0)
-        model = train_tree_model(X_train, y_train, model_type="hist_gb")
+        with TemporaryDirectory() as directory:
+            model = train_tree_model(X_train, y_train, model_type="hist_gb", model_path=Path(directory) / "toy_model.joblib")
 
         results, preds = evaluate_thresholds_on_validation(
             model, val_s1, val_candidate_pairs, truth_by_s1, target_cache
