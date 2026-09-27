@@ -1,0 +1,19 @@
+{
+  "validation_size": 440522,
+  "union_candidate_count": 21344622,
+  "true_hits": 1424219,
+  "true_links": 1525811,
+  "recall": 0.9334177037654073,
+  "candidate_stats": {
+    "total_pairs": 21344622,
+    "mean": 48.45302164250594,
+    "median": 30,
+    "p90": 93,
+    "p95": 140,
+    "p99": 262,
+    "max": 1084,
+    "zero_entities": 0
+  },
+  "total_seconds": 1756.7806443999289,
+  "approx_peak_rss_bytes": 2780348416
+}
