@@ -1,5 +1,14 @@
 # Project status
 
+## Final submission — complete (27 September 2026)
+
+- User requested a valid submission immediately, so the long Stage 4/TF-IDF/model test runs were stopped and a conservative exact-key fallback was generated with `src/generate_quick_submission.py`. This is the submitted method; earlier prototype validation scores do not apply to it.
+- Final files: `output/matching_results.tsv` and `output/candidate_pairs.tsv`. Both have 1,732,544 test S1 rows. There are 84,110 links on 77,328 non-empty S1 rows; 1,655,216 rows are empty.
+- `python utils/validate_submission.py --matching output/matching_results.tsv --candidate output/candidate_pairs.tsv --test-dir dataset/test --check-ids` passed with no blocking issues. It verified all 9,969,589 test S2/S3 IDs for existence checks.
+- Final package: `output/albertnewtonepsteinnetanyahu_submission.zip` (19,559,809 bytes), containing both TSVs, runnable code, instructions, requirements, and a filled methodology document. `utils/package_submission.py` tested ZIP integrity and wrote `output/package_manifest.json` with checksums.
+- Warning: no labeled validation score was measured for the fallback; it is deliberately strict and may have low recall. The portal score is unknown.
+- Next step: upload `output/matching_results.tsv` to the leaderboard; submit the ZIP for the final package requirement.
+
 ## Stage 1 — Dataset profiling: complete
 
 - Raw TSVs were profiled without modification: `reports/data_profile.md`.

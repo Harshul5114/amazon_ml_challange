@@ -14,6 +14,7 @@
 !/artifacts/tree_match_model.joblib
 /matching_results.tsv
 /candidate_pairs.tsv
+/output/
 
 # Local Python environments and caches
 .venv/
