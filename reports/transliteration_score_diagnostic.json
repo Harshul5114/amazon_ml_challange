@@ -1,0 +1,118 @@
+{
+  "cross_script_sample_size": 46,
+  "median_true_cosine": 0.0702372957020998,
+  "median_k10_cutoff": 0.30458156764507294,
+  "true_cosine_below_k10_cutoff": 42,
+  "true_cosine_zero": 17,
+  "true_pair_in_top10": 0,
+  "examples": [
+    {
+      "s1_id": "S1-603534940",
+      "target_id": "S3-562338812",
+      "direct_cosine": 0.41164126992225647,
+      "rank_0_based": null,
+      "k10_cutoff": 0.6085176467895508,
+      "s1_name": "sai marketing private limited",
+      "target_name_translit": "sayi marketimg praivet limited"
+    },
+    {
+      "s1_id": "S1-927121205",
+      "target_id": "S3-690841133",
+      "direct_cosine": 0.2817973494529724,
+      "rank_0_based": null,
+      "k10_cutoff": 0.4181393086910248,
+      "s1_name": "tirupati infrastructure private limited",
+      "target_name_translit": "tiruppti inkprastrkcr piraivet limitet"
+    },
+    {
+      "s1_id": "S1-190867594",
+      "target_id": "S3-392711911",
+      "direct_cosine": 0.03332016244530678,
+      "rank_0_based": null,
+      "k10_cutoff": 0.07435918599367142,
+      "s1_name": "south creative finance private limited",
+      "target_name_translit": "sauth kriy etibh phainyans praibhet limited"
+    },
+    {
+      "s1_id": "S1-211572400",
+      "target_id": "S3-339581589",
+      "direct_cosine": 0.1179341971874237,
+      "rank_0_based": null,
+      "k10_cutoff": 0.6230071187019348,
+      "s1_name": "bright global private limited",
+      "target_name_translit": "brait globl praivet limited"
+    },
+    {
+      "s1_id": "S1-606303144",
+      "target_id": "S3-502774147",
+      "direct_cosine": 0.0,
+      "rank_0_based": null,
+      "k10_cutoff": 0.0645250678062439,
+      "s1_name": "perfect healthcare pvt ltd",
+      "target_name_translit": "prphekt helthkeyr pra li"
+    },
+    {
+      "s1_id": "S1-204500555",
+      "target_id": "S2-107828029",
+      "direct_cosine": 0.0,
+      "rank_0_based": null,
+      "k10_cutoff": 0.14390422403812408,
+      "s1_name": "hitech international llp",
+      "target_name_translit": "haitek intrnesnl elelpi"
+    },
+    {
+      "s1_id": "S1-416141222",
+      "target_id": "S2-218174200",
+      "direct_cosine": 0.0,
+      "rank_0_based": null,
+      "k10_cutoff": 0.0,
+      "s1_name": "creative foundation private limited",
+      "target_name_translit": "krietiv phaumdesn praivet limited"
+    },
+    {
+      "s1_id": "S1-668658123",
+      "target_id": "S2-448299046",
+      "direct_cosine": 0.08416959643363953,
+      "rank_0_based": null,
+      "k10_cutoff": 0.747702419757843,
+      "s1_name": "seven power private limited",
+      "target_name_translit": "sevn pavr praivet limited"
+    },
+    {
+      "s1_id": "S1-429427171",
+      "target_id": "S3-365556778",
+      "direct_cosine": 0.044561658054590225,
+      "rank_0_based": null,
+      "k10_cutoff": 0.1278567761182785,
+      "s1_name": "unique logistics private limited",
+      "target_name_translit": "yunik lojistiks praivet limited"
+    },
+    {
+      "s1_id": "S1-828564103",
+      "target_id": "S3-522844134",
+      "direct_cosine": 0.08012036234140396,
+      "rank_0_based": null,
+      "k10_cutoff": 0.09752406924962997,
+      "s1_name": "great solutions private limited",
+      "target_name_translit": "gret solyusms praivet limited"
+    },
+    {
+      "s1_id": "S1-779310084",
+      "target_id": "S3-57586760",
+      "direct_cosine": 0.0,
+      "rank_0_based": null,
+      "k10_cutoff": 0.3243021070957184,
+      "s1_name": "my systems pvt ltd",
+      "target_name_translit": "may sistms pra li"
+    },
+    {
+      "s1_id": "S1-120012837",
+      "target_id": "S2-38233491",
+      "direct_cosine": 0.05485769361257553,
+      "rank_0_based": null,
+      "k10_cutoff": 0.14909915626049042,
+      "s1_name": "lakshmi technologies",
+      "target_name_translit": "lksmi teknolojis"
+    }
+  ]
+}

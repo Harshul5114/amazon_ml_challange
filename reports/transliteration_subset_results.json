@@ -1,0 +1,436 @@
+{
+  "subset_s1": 50000,
+  "true_links": 173180,
+  "s1_non_latin_names": 0,
+  "target_scanned": {
+    "S2": 5034616,
+    "S3": 5285603
+  },
+  "target_transliterated": {
+    "S2": 456369,
+    "S3": 244741
+  },
+  "tfidf": {
+    "analyzer": "char_wb",
+    "ngram_range": [
+      4,
+      5
+    ],
+    "min_df": 2,
+    "max_df": 0.02,
+    "score_floor": 0.05,
+    "batch_size": 50000,
+    "top_k": 10,
+    "vocabulary_size": 45040,
+    "query_nonzeros": 1136270
+  },
+  "cross_script_missed_before": 3373,
+  "eligible_truth_links": 11463,
+  "cross_script_truth_links": 11463,
+  "metrics": {
+    "current_best": {
+      "true_hits": 161584,
+      "true_links": 173180,
+      "true_recall": 0.9330407668321977,
+      "source_recall": {
+        "S2": {
+          "hits": 78567,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 83017,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 62061,
+          "total": 69246
+        },
+        "US": {
+          "hits": 99523,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 2424163,
+        "mean": 48.48326,
+        "median": 30,
+        "p90": 94,
+        "p95": 141,
+        "p99": 260,
+        "max": 691,
+        "zero_entities": 0
+      }
+    },
+    "translit_k5": {
+      "true_hits": 101,
+      "true_links": 173180,
+      "true_recall": 0.0005832082226585056,
+      "source_recall": {
+        "S2": {
+          "hits": 53,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 48,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 101,
+          "total": 69246
+        },
+        "US": {
+          "hits": 0,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 157056,
+        "mean": 3.14112,
+        "median": 0,
+        "p90": 10,
+        "p95": 10,
+        "p99": 10,
+        "max": 10,
+        "zero_entities": 33890
+      }
+    },
+    "union_k5": {
+      "true_hits": 161609,
+      "true_links": 173180,
+      "true_recall": 0.9331851253031528,
+      "source_recall": {
+        "S2": {
+          "hits": 78578,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 83031,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 62086,
+          "total": 69246
+        },
+        "US": {
+          "hits": 99523,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 2581063,
+        "mean": 51.62126,
+        "median": 36,
+        "p90": 97,
+        "p95": 144,
+        "p99": 263,
+        "max": 695,
+        "zero_entities": 0
+      }
+    },
+    "translit_k10": {
+      "true_hits": 153,
+      "true_links": 173180,
+      "true_recall": 0.0008834738422450629,
+      "source_recall": {
+        "S2": {
+          "hits": 85,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 68,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 153,
+          "total": 69246
+        },
+        "US": {
+          "hits": 0,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 310230,
+        "mean": 6.2046,
+        "median": 0,
+        "p90": 20,
+        "p95": 20,
+        "p99": 20,
+        "max": 20,
+        "zero_entities": 33890
+      }
+    },
+    "union_k10": {
+      "true_hits": 161626,
+      "true_links": 173180,
+      "true_recall": 0.9332832890634022,
+      "source_recall": {
+        "S2": {
+          "hits": 78590,
+          "total": 83614
+        },
+        "S3": {
+          "hits": 83036,
+          "total": 89566
+        }
+      },
+      "country_recall": {
+        "India": {
+          "hits": 62103,
+          "total": 69246
+        },
+        "US": {
+          "hits": 99523,
+          "total": 103934
+        }
+      },
+      "candidate_counts": {
+        "total_pairs": 2734161,
+        "mean": 54.68322,
+        "median": 38,
+        "p90": 102,
+        "p95": 149,
+        "p99": 266,
+        "max": 695,
+        "zero_entities": 0
+      }
+    }
+  },
+  "incremental": {
+    "5": {
+      "new_true_links": 25,
+      "additional_candidate_pairs": 156900,
+      "true_links_per_1000_added_candidates": 0.15933715742511154,
+      "cross_script_misses_recovered": 25,
+      "same_or_uncertain_script_misses_recovered": 0,
+      "eligible_truth_retrieved_alone": 101,
+      "eligible_truth_total": 11463,
+      "cross_script_truth_retrieved_alone": 101,
+      "cross_script_truth_total": 11463
+    },
+    "10": {
+      "new_true_links": 42,
+      "additional_candidate_pairs": 309998,
+      "true_links_per_1000_added_candidates": 0.13548474506287136,
+      "cross_script_misses_recovered": 42,
+      "same_or_uncertain_script_misses_recovered": 0,
+      "eligible_truth_retrieved_alone": 153,
+      "eligible_truth_total": 11463,
+      "cross_script_truth_retrieved_alone": 153,
+      "cross_script_truth_total": 11463
+    }
+  },
+  "collision_audit": {
+    "distinct_transliterations": 213611,
+    "collision_groups": 14309,
+    "records_in_collision_groups": 220900,
+    "distinct_original_names_in_collision_groups": 34718,
+    "empty_transliterations": 0,
+    "examples": [
+      {
+        "name_translit": "om phud praivet limited",
+        "distinct_name_norm": 9,
+        "record_count": 59,
+        "name_norm_examples": [
+          "om फूड प्राइवेट लिमिटेड",
+          "om ఫుడ్ ప్రైవేట్ లిమిటెడ్",
+          "ओम फूड प्राइवेट लिमिटेड",
+          "ॐ फूड प्राइवेट लिमिटेड",
+          "ઓમ ફૂડ પ્રાઇવેટ લિમિટેડ",
+          "ૐ ફૂડ પ્રાઇવેટ લિમિટેડ"
+        ]
+      },
+      {
+        "name_translit": "al impeks praivet limited",
+        "distinct_name_norm": 8,
+        "record_count": 80,
+        "name_norm_examples": [
+          "al इम्पेक्स प्राइवेट लिमिटेड",
+          "al ಇಂಪೆಕ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "अल इम्पेक्स प्राइवेट लिमिटेड",
+          "અલ ઇમ્પેક્સ પ્રાઇવેટ લિમિટેડ",
+          "అల్ ఇంపెక్స్ ప్రైవేట్ లిమిటెడ్",
+          "ఆల్ ఇంపెక్స్ ప్రైవేట్ లిమిటెడ్"
+        ]
+      },
+      {
+        "name_translit": "om estet praivet limited",
+        "distinct_name_norm": 8,
+        "record_count": 73,
+        "name_norm_examples": [
+          "om एस्टेट प्राइवेट लिमिटेड",
+          "ओम एस्टेट प्राइवेट लिमिटेड",
+          "ॐ एस्टेट प्राइवेट लिमिटेड",
+          "ઓમ એસ્ટેટ પ્રાઇવેટ લિમિટેડ",
+          "ૐ એસ્ટેટ પ્રાઇવેટ લિમિટેડ",
+          "ఓం ఎస్టేట్ ప్రైవేట్ లిమిటెడ్"
+        ]
+      },
+      {
+        "name_translit": "om devlprs praivet limited",
+        "distinct_name_norm": 8,
+        "record_count": 60,
+        "name_norm_examples": [
+          "om डेवलपर्स प्राइवेट लिमिटेड",
+          "ओम डेवलपर्स प्राइवेट लिमिटेड",
+          "ॐ डेवलपर्स प्राइवेट लिमिटेड",
+          "ઓમ ડેવલપર્સ પ્રાઇવેટ લિમિટેડ",
+          "ૐ ડેવલપર્સ પ્રાઇવેટ લિમિટેડ",
+          "ఓం డెవలపర్స్ ప్రైవేట్ లిమిటెడ్"
+        ]
+      },
+      {
+        "name_translit": "om prodyusr praivet limited",
+        "distinct_name_norm": 8,
+        "record_count": 58,
+        "name_norm_examples": [
+          "om प्रोड्यूसर प्राइवेट लिमिटेड",
+          "ओम प्रोड्यूसर प्राइवेट लिमिटेड",
+          "ॐ प्रोड्यूसर प्राइवेट लिमिटेड",
+          "ઓમ પ્રોડ્યુસર પ્રાઇવેટ લિમિટેડ",
+          "ૐ પ્રોડ્યુસર પ્રાઇવેટ લિમિટેડ",
+          "ఓం ప్రొడ్యూసర్ ప్రైవేట్ లిమిటెడ్"
+        ]
+      },
+      {
+        "name_translit": "om prodkts praivet limited",
+        "distinct_name_norm": 8,
+        "record_count": 51,
+        "name_norm_examples": [
+          "om ಪ್ರೊಡಕ್ಟ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್",
+          "ओम प्रोडक्ट्स प्राइवेट लिमिटेड",
+          "ॐ प्रोडक्ट्स प्राइवेट लिमिटेड",
+          "ઓમ પ્રોડક્ટ્સ પ્રાઇવેટ લિમિટેડ",
+          "ૐ પ્રોડક્ટ્સ પ્રાઇવેટ લિમિટેડ",
+          "ఓం ప్రొడక్ట్స్ ప్రైవేట్ లిమిటెడ్"
+        ]
+      },
+      {
+        "name_translit": "om marketimg praivet limited",
+        "distinct_name_norm": 8,
+        "record_count": 39,
+        "name_norm_examples": [
+          "om मार्केटिंग प्राइवेट लिमिटेड",
+          "om మార్కెటింగ్ ప్రైవేట్ లిమిటెడ్",
+          "ओम मार्केटिंग प्राइवेट लिमिटेड",
+          "ॐ मार्केटिंग प्राइवेट लिमिटेड",
+          "ઓમ માર્કેટિંગ પ્રાઇવેટ લિમિટેડ",
+          "ఓం మార్కెటింగ్ ప్రైవేట్ లిమిటెడ్"
+        ]
+      },
+      {
+        "name_translit": "al aiti praivet limited",
+        "distinct_name_norm": 7,
+        "record_count": 101,
+        "name_norm_examples": [
+          "al आईटी प्राइवेट लिमिटेड",
+          "अल आईटी प्राइवेट लिमिटेड",
+          "અલ આઈટી પ્રાઇવેટ લિમિટેડ",
+          "అల్ ఐటీ ప్రైవేట్ లిమిటెడ్",
+          "ఆల్ ఐటీ ప్రైవేట్ లిమిటెడ్",
+          "ಅಲ್ ಐಟಿ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್"
+        ]
+      },
+      {
+        "name_translit": "al phuds praivet limited",
+        "distinct_name_norm": 7,
+        "record_count": 76,
+        "name_norm_examples": [
+          "al फूड्स प्राइवेट लिमिटेड",
+          "अल फूड्स प्राइवेट लिमिटेड",
+          "અલ ફૂડ્સ પ્રાઇવેટ લિમિટેડ",
+          "అల్ ఫుడ్స్ ప్రైవేట్ లిమిటెడ్",
+          "ఆల్ ఫుడ్స్ ప్రైవేట్ లిమిటెడ్",
+          "ಅಲ್ ಫುಡ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್"
+        ]
+      },
+      {
+        "name_translit": "al eksports praivet limited",
+        "distinct_name_norm": 7,
+        "record_count": 74,
+        "name_norm_examples": [
+          "al एक्सपोर्ट्स प्राइवेट लिमिटेड",
+          "अल एक्सपोर्ट्स प्राइवेट लिमिटेड",
+          "અલ એક્સપોર્ટ્સ પ્રાઇવેટ લિમિટેડ",
+          "అల్ ఎక్స్‌పోర్ట్స్ ప్రైవేట్ లిమిటెడ్",
+          "ఆల్ ఎక్స్‌పోర్ట్స్ ప్రైవేట్ లిమిటెడ్",
+          "ಅಲ್ ಎಕ್ಸ್‌ಪೋರ್ಟ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್"
+        ]
+      },
+      {
+        "name_translit": "al sistms praivet limited",
+        "distinct_name_norm": 7,
+        "record_count": 65,
+        "name_norm_examples": [
+          "al सिस्टम्स प्राइवेट लिमिटेड",
+          "अल सिस्टम्स प्राइवेट लिमिटेड",
+          "અલ સિસ્ટમ્સ પ્રાઇવેટ લિમિટેડ",
+          "అల్ సిస్టమ్స్ ప్రైవేట్ లిమిటెడ్",
+          "ఆల్ సిస్టమ్స్ ప్రైవేట్ లిమిటెడ్",
+          "ಅಲ್ ಸಿಸ್ಟಮ್ಸ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್"
+        ]
+      },
+      {
+        "name_translit": "al marketimg praivet limited",
+        "distinct_name_norm": 7,
+        "record_count": 63,
+        "name_norm_examples": [
+          "al मार्केटिंग प्राइवेट लिमिटेड",
+          "अल मार्केटिंग प्राइवेट लिमिटेड",
+          "અલ માર્કેટિંગ પ્રાઇવેટ લિમિટેડ",
+          "అల్ మార్కెటింగ్ ప్రైవేట్ లిమిటెడ్",
+          "ఆల్ మార్కెటింగ్ ప్రైవేట్ లిమిటెడ్",
+          "ಅಲ್ ಮಾರ್ಕೆಟಿಂಗ್ ಪ್ರೈವೇಟ್ ಲಿಮಿಟೆಡ್"
+        ]
+      }
+    ]
+  },
+  "stage6b_sample_recovered": {
+    "5": {},
+    "10": {}
+  },
+  "stage6b_sample_remaining": {
+    "5": {
+      "cross-script / transliteration": 47,
+      "shortened / alternate / web-style name": 35,
+      "severe spelling variation": 27,
+      "different or missing address": 24,
+      "opaque / possibly corrupted name": 11,
+      "substantially different address formatting": 3,
+      "weak information in both fields": 1,
+      "legal suffix / abbreviation": 2
+    },
+    "10": {
+      "cross-script / transliteration": 47,
+      "shortened / alternate / web-style name": 35,
+      "severe spelling variation": 27,
+      "different or missing address": 24,
+      "opaque / possibly corrupted name": 11,
+      "substantially different address formatting": 3,
+      "weak information in both fields": 1,
+      "legal suffix / abbreviation": 2
+    }
+  },
+  "timing": {
+    "fit_seconds": 3.3645802999999432,
+    "scan_seconds": 252.5297215999999,
+    "vectorization_seconds": 39.81987180000215,
+    "sparse_product_seconds": 2.9782559000123,
+    "total_seconds": 312.9425642000024,
+    "approx_peak_rss_bytes": 701657088
+  },
+  "dependency": {
+    "package": "anyascii",
+    "version": "0.3.3",
+    "license": "ISC",
+    "license_url": "https://github.com/anyascii/anyascii/blob/master/LICENSE"
+  }
+}
