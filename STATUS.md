@@ -61,3 +61,60 @@
 - Current Stage 6A best recall **93.304%** rises only to **93.319%** at transliteration K=5 (+25 true links, +156,900 pairs) or **93.328%** at K=10 (+42 links, +309,998 pairs). India recall changes **89.624% → 89.660%** at K=5. Only **25/3,373 (0.741%)** previously missed cross-script links are recovered at K=5. Incremental yield is **0.159 true links per 1,000 added pairs**.
 - The targeted retrieval took **255.9 s**; complete subset evaluation took **312.9 s**, peak RSS **0.65 GiB**. A direct-score sample showed median true-pair cosine **0.070** versus median top-10 cutoff **0.305**. Transliteration also merges multiple distinct normalized names into **14,309** output strings; many are cross-script equivalents, but the low candidate yield warns of confusability.
 - Decision: do not include this transliteration channel in the current candidate baseline. **11,571** links remain missed after K=5, including **3,348** detected cross-script links. A future phonetic/language-aware approach would need a separate subset experiment. No full validation/test retrieval or ML matching model was run.
+
+## Stage 8 — Full Validation Candidate Generation: complete
+
+- `reports/run_full_validation_retrieval.py` executes self-sufficient, end-to-end candidate generation over the entire validation split (**440,522** S1 entities). It dynamically regenerates missing cache components (Stage 4 baseline rules, Name TF-IDF K=10, Address TF-IDF K=5) and computes the exact multi-channel union.
+- Optimized implementation with fast line-based TSV streaming and 12-thread sparse matrix multiplications (`sp_matmul_topn`).
+- Full validation candidate results:
+  - **Union candidate recall: 93.342%** (1,424,219 / 1,525,811 true validation links retrieved, adding **499,437** true links or **+32.733 percentage points** over Stage 4 baseline).
+  - **Total candidate volume: 21,344,622** pairs across 440,522 S1 entities.
+  - **Candidate statistics per S1**: mean **48.45**, median **30**, P90 **93**, P95 **140**, P99 **262**, max **1,084**, zero-candidate entities: **0**.
+  - Total runtime: **1,756.8 s** (~29.3 minutes); peak RSS: **2.59 GiB**.
+- Reusable serialized artifacts created under `artifacts/`:
+  - `artifacts/stage4_pairs_packed.npy` (10,707,669 packed uint64 pairs)
+  - `artifacts/tfidf_top20.npz` (Top-10 name TF-IDF scores and IDs)
+  - `artifacts/address_tfidf_top10.npz` (Top-10 address TF-IDF scores and IDs)
+  - `artifacts/full_validation_candidates_packed.npy` (21,344,622 packed candidate pairs)
+  - `artifacts/validation_candidate_pairs.tsv` (Standard TSV candidate pairs format exported in 18.8 s)
+  - `reports/full_validation_retrieval_results.json` (Full numerical metrics)
+
+## Stage 9 — Pairwise Similarity Feature Engineering: complete
+
+- `src/similarity_features.py` implements 15 pairwise similarity features covering exact matches, token overlap, containment, character n-gram similarity, numeric agreement & conflict, same-country agreement, missingness indicators, and source indicator (`FEATURE_NAMES`):
+  1. `exact_name_match` (boolean indicator)
+  2. `name_jaccard` (token Jaccard similarity)
+  3. `name_containment` (token containment ratio)
+  4. `name_len_diff_ratio` (length difference normalized by max length)
+  5. `name_char_ngram_jaccard` (character 3-gram Jaccard similarity)
+  6. `exact_address_match` (boolean indicator)
+  7. `address_jaccard` (address token Jaccard similarity)
+  8. `address_containment` (address token containment ratio)
+  9. `numeric_overlap_count` (shared house/postal numeric token count)
+  10. `numeric_jaccard` (numeric token Jaccard similarity)
+  11. `numeric_conflict` (boolean indicator for non-overlapping significant numbers)
+  12. `same_country` (boolean country match)
+  13. `missing_s1_address` (boolean missingness indicator)
+  14. `missing_target_address` (boolean missingness indicator)
+  15. `target_is_s2` (boolean target source indicator)
+- `tests/test_similarity_features.py` verifies all edge cases: exact matches, complete disjoints, numeric conflicts, missing addresses, empty inputs, and matrix dimensions (8 unit tests passing).
+- `reports/generate_features.py` sampled 20,000 training S1 entities and generated 1,045,766 training pairs (**69,025** true match links and **976,741** hard negative candidate pairs retrieved from inverted blocking indices).
+- `reports/augment_training_features.py` addressed candidate distribution shift by augmenting `artifacts/train_features.npz` with 150,000 diverse negative pairs (75,000 random background pairs and 75,000 address-sharing / name-mismatch pairs), bringing the final training set to **1,195,766** pairs (10.7 MB).
+
+## Stage 10 — Tree-Based Match Model: complete
+
+- `src/train_match_model.py` implements a histogram-based gradient-boosted decision tree matcher (`HistGradientBoostingClassifier`, conforming to user constraint "go for any tree based model rather than linear regression") optimized for entity-level macro F0.5.
+- Model architecture: `HistGradientBoostingClassifier(max_iter=150, learning_rate=0.08, max_leaf_nodes=31, min_samples_leaf=20, early_stopping=True, validation_fraction=0.1)`. Sample weighting applies square-root inverse frequency weighting to balance true links against large candidate volumes.
+- Training performance: fitted on **1,195,766** pairwise candidate vectors with 15 features in **9.8 s** utilizing all CPU cores. Training ROC-AUC: **0.9995**. Serialized to `artifacts/tree_match_model.joblib`.
+- Validation evaluation: evaluated on the stratified **50,000** validation subset against all **2,423,980** multi-channel candidate pairs generated from Stage 8 (Stage 4 baseline + Name TF-IDF K=10 + Address TF-IDF K=5). Scored all pairs in **47.1 s**.
+- Threshold search: fine-grained sweep across high confidence thresholds [0.85, 0.9995] with top-1 prediction per target source (S2 and S3) to strictly control precision for the F0.5 metric.
+- Primary metrics at optimal threshold (**T = 0.97**):
+  - **Entity Macro F0.5: 0.454827**
+  - **Pair Precision: 54.282%** (52,541 true positives vs 44,252 false positives)
+  - **Pair Recall: 30.339%** (52,541 / 173,180 true links)
+  - **Average predicted matches per S1: 1.936**
+- Full metrics and threshold curve across all examined thresholds are recorded in `reports/model_evaluation_results.json`.
+- Unit tests: `tests/test_train_match_model.py` passes all training, probability calibration, and thresholding assertions (39 total unit tests passing in repository).
+
+
+

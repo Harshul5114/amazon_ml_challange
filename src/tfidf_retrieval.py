@@ -27,7 +27,7 @@ class TfidfNameRetriever:
         *,
         top_k: int = 20,
         batch_size: int = 100_000,
-        n_threads: int = 4,
+        n_threads: int = 12,
         min_df: int = 2,
         max_df: float = 0.02,
         score_floor: float = 0.05,
@@ -122,10 +122,19 @@ class TfidfNameRetriever:
         source = path.stem.split("_")[-1].upper().replace("SOURCE", "S")
         buffers = defaultdict(lambda: ([], []))
         with path.open("r", encoding="utf-8-sig", newline="") as handle:
-            reader = csv.DictReader(handle, delimiter="\t")
-            for row in reader:
-                country = row["country"] or ""
-                target_id = row["entity_id"]
+            header = handle.readline().rstrip("\r\n").split("\t")
+            id_idx = header.index("entity_id")
+            field_name = f"business_{self.text_field}"
+            text_idx = header.index(field_name)
+            country_idx = header.index("country")
+            min_cols = max(id_idx, text_idx, country_idx) + 1
+
+            for line in handle:
+                parts = line.rstrip("\r\n").split("\t")
+                if len(parts) < min_cols:
+                    continue
+                country = parts[country_idx] or ""
+                target_id = parts[id_idx]
                 prefix, numeric = target_id.split("-", 1)
                 if prefix != source:
                     raise ValueError(f"Unexpected target ID prefix in {path}: {target_id}")
@@ -133,7 +142,7 @@ class TfidfNameRetriever:
                 if not 0 <= numeric_id < 2**32:
                     raise ValueError(f"Target ID exceeds uint32 range: {target_id}")
                 names, ids = buffers[country]
-                names.append(normalize_text(row[f"business_{self.text_field}"]))
+                names.append(normalize_text(parts[text_idx]))
                 ids.append(numeric_id)
                 if len(names) >= self.batch_size:
                     self._process_batch(source, country, names, ids)
